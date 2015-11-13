@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="free">
+
+	<!-- 페이징 기법을 위한 
+	 전체게시물의 수를 반환 -->
+	<select id="totalCount" resultType="int"
+	 parameterType="String">
+		SELECT COUNT(*) FROM freeboard
+		WHERE status=0 
+	</select>
+	 
+	<!-- 페이징 기법을 활용한 select -->
+	<select id="list" 
+	resultType="silver.web.board.vo.FreeBoardVO" 
+	parameterType="java.util.Map">
+		SELECT * FROM (
+			SELECT rownum as r_num, a.* FROM (
+				SELECT * FROM freeboard
+				WHERE status=0 
+				ORDER BY fb_num DESC
+			) a
+		) WHERE r_num BETWEEN #{begin} AND #{end}
+	
+	</select>
+	
+	<!-- 원글을 저장하는 insert -->
+	<insert id="write" 
+	parameterType="silver.web.board.vo.FreeBoardVO">
+		INSERT INTO freeboard(fb_num, fb_subject, fb_content,
+		 fb_writertel, fb_regdate, fb_pwd, status,fb_readcount)
+		VALUES(freeboaed_seq.NEXTVAL,#{fb_subject},
+		 #{fb_content},#{fb_writertel},sysdate,#{fb_pwd},0,0)
+	</insert>
+	<!-- 조회수 증가 -->
+	
+	<update id="updateHit" parameterType="String">
+		UPDATE freeboard
+		SET fb_readcount = fb_readcount+1
+		WHERE fb_num=#{no}
+	</update>
+	
+	
+	
+	
+	<!-- 게시물 보기 기능을 수행하는 select
+	  기본키(seq)값으로 검색한다. -->
+	<select id="getBoard" 
+	parameterType="String" 
+	resultType="silver.web.board.vo.FreeBoardVO">
+		SELECT * FROM freeboard
+		WHERE fb_num=#{n}
+	</select>  
+<update id="edit" 
+	parameterType="silver.web.board.vo.FreeBoardVO">
+		UPDATE freeboard
+		SET fb_subject=#{fb_subject},
+			fb_content=#{fb_content}
+			
+		WHERE fb_num=#{fb_num} AND fb_pwd=#{fb_pwd}
+	</update>
+	
+	<update id="freedel" parameterType="java.util.Map">
+	UPDATE freeboard set status=1
+	where fb_num=#{fb_num} and fb_pwd=#{fb_pwd}
+	
+	</update>
+	
+		
+
+</mapper>

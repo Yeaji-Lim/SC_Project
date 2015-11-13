@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    
+   <context:annotation-config/>
+    
+    <!--로그인 bean-->
+    <bean id="login" class="silver.web.member.control.LoginControl" autowire="byName"/>
+    
+    <!--문의사항 보여주는 bean-->
+    <bean id="qblist" class="silver.web.board.control.QNAListControl" autowire="byName"/>
+		
+	<!--문의사항 쓰기jsp로 직접 이동시에 쓴다-->
+	<bean name="/qb_writeForm.sc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/board/qnAWrite"/>
+	</bean>
+	
+	<!--문의사항을 저장하는 bean-->
+	<bean id="qbwrite" class="silver.web.board.control.QNAWriteControl" autowire="byName"/>
+	
+	<!--문의사항 보기 bean-->
+	<bean id="qbview" class="silver.web.board.control.QNAViewControl" autowire="byName"/>
+	
+	<!--문의사항 수정 bean-->	
+	<bean id="qbedit" class="silver.web.board.control.QNAEditControl"/>
+	
+	<!--문의사항 답변 쓰기 bean-->
+	<bean id="qbanswer" class="silver.web.board.control.QNAAnswerControl"/>
+	
+	<!-- 공지사항 리스트 뷰 -->
+	<bean name="/notice.sc" 
+	class="silver.web.board.control.Notice_list_Control">
+	<property name="ntdao" ref="ntdao"></property>
+	</bean>
+	<!-- 공지사항 글쓰기 -->
+	<bean id="notice_write" class="silver.web.board.control.Notice_WriteControl" autowire="byName">
+	</bean>
+	<!-- 공지사항 글쓰기 폼 -->
+	<bean name="/writeForm.sc"
+	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" 
+			value="/board/notice_write"/>
+	</bean>
+	<!-- 공지사항 보기 -->
+	<bean name="/notice_view.sc" class="silver.web.board.control.Notice_ViewControl">
+		<property name="dao" ref="ntdao"></property>
+	</bean>
+	<!-- 공지사항 수정 -->
+	<bean id="notice_edit" class="silver.web.board.control.Notice_EditControl" autowire="byName">	
+	</bean>
+	<bean name="/editForm.sc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="notice_edit"/>
+	</bean>
+	<!-- 공지사항 삭제 -->
+	<bean name="/notice_del.sc" class="silver.web.board.control.Notice_DelControl" autowire="byName">
+		<property name="dao" ref="ntdao"></property>
+	</bean>
+	<!--자유게시판 쓰기-->
+	<bean id="freewrite" class="silver.web.board.control.FreeBoardWControl"/>
+	<bean name="/freewriteform.sc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+	<property name="viewName" value="/board/freewrite"></property>
+	</bean>
+	<!--자유게시판 보기-->
+	<bean id="freeview" class="silver.web.board.control.FreeBoardVControl"/>
+	<!--자유게시판 수정-->
+	<bean id="freeedit" class="silver.web.board.control.FreeBoardEControl"/>
+	<!--자유게시판 삭제-->
+	<bean id="freedel" class="silver.web.board.control.FreeBoardDControl"/>
+	<!--자유게시판 리스트-->
+	<bean id="freelist" class="silver.web.board.control.FreeBoardControl"/>
+	
+	<!--정보게시판 리스트-->
+	<bean name="/info.sc" 
+	class="silver.web.board.control.InfoListControl" autowire="byName">
+		<!-- <property name="infoDAO" ref="infoDAO"/> -->
+	</bean>
+	
+	
+		<!-- JSP로 직접 이동시 -->
+	<bean name="/infowriteForm.sc"
+	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" 
+			value="/board/infoWrite"/>
+	</bean>
+	
+	<!-- 원글을 저장하는 bean -->
+	<bean id="infowrite" 
+	class="silver.web.board.control.InfoWriteControl">
+		<property name="uploadPath" 
+			value="/upload"/>
+	</bean>
+	
+	<!-- 게시물 보기 -->
+	<bean name="/view.sc" 
+	   class="silver.web.board.control.InfoViewControl" 
+	   autowire="byName"/>
+	   
+	<!-- 게시물 수정 -->
+	<bean id="infoedit" 
+	class="silver.web.board.control.InfoEditControl">
+		<property name="uploadPath"
+		 value="/upload"/>
+	</bean>   
+	
+	<bean id="infoanswer" class="silver.web.board.control.InfoAnswerControl">
+		<property name="uploadPath" value="/upload"/>
+	</bean>
+	
+	<bean id="infocomment"
+	class="silver.web.board.control.InfoAddAnsControl" autowire="byName"/>
+	
+	<bean id="infobbsDel" class="silver.web.board.control.InfoDelControl"/>
+	
+	<bean id="infodelComm" class="silver.web.board.control.InfodelCommControl"/>
+	
+	
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+</beans>

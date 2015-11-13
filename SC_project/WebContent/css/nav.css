@@ -1,0 +1,9 @@
+#nav{
+	z-index:10000;
+	position:fixed;
+	top:250px;
+	left:0;
+	width:200px;
+	height:519px;
+	background:red;
+}

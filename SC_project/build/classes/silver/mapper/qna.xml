@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qna">
+
+	<!--페이징 기법을 위한 전체 게시물의 수를 반환-->
+  	<select id="totalCount" resultType="int">
+  		select count(*) from QNABOARD
+  	</select>
+	
+	
+	<!-- 페이징 기법을 활용한 select -->
+	<select id="qbList" 
+	parameterType="java.util.Map" 
+	resultType="silver.web.board.vo.QNABoardVO">
+		SELECT * FROM (
+			SELECT rownum r_num,a.* FROM(
+				SELECT * FROM QNABOARD
+				ORDER BY qb_groups DESC, qb_lev ASC 
+			) a
+		) WHERE r_num BETWEEN #{begin} AND #{end}
+	</select>
+	
+	
+	
+	<!--QNA 게시판 insert-->
+  <insert id="qb_write" parameterType="silver.web.board.vo.QNABoardVO">
+  	INSERT INTO QNABoard(qb_num, qb_subject, qb_writer, qb_content,qb_regdate, qb_readcount, qb_groups, qb_step, qb_lev) 
+  	VALUES(SEQ_QNABOARD.NEXTVAL,#{qb_subject},#{qb_writer},#{qb_content},SYSDATE,0,SEQ_QNA_GROUP.NEXTVAL,0,0)
+  </insert>
+		
+	<!--답변을 저장하기 전에 lev를 조정하는 update
+  		(참조글의 groups가 같고, 참조글의 lev보다 큰 lev값들을 1씩 증가)-->
+  	<update id="updateLev" parameterType="java.util.Map">
+  		update QNABoard set qb_lev = qb_lev+1
+  		where qb_groups=#{qb_groups} and qb_lev &gt; #{qb_lev}
+  	</update>		
+
+
+	<!--QNA 답변 insert-->
+	<insert id="qb_ans_write" parameterType="silver.web.board.vo.QNABoardVO">
+	INSERT INTO QNABoard(qb_num, qb_subject, qb_writer, qb_content,qb_regdate, qb_readcount, qb_groups, qb_step, qb_lev) 
+  	VALUES(SEQ_QNABOARD.NEXTVAL,#{qb_subject},#{qb_writer},#{qb_content},SYSDATE,0,#{qb_groups},#{qb_step},#{qb_lev})
+	</insert>	
+
+	<!--QNABoard 보기 select-->
+	<select id="qb_view" parameterType="String" resultType="silver.web.board.vo.QNABoardVO">
+		SELECT * FROM QNABOARD
+		WHERE qb_num = #{qb_num}
+	</select>
+	
+	<!--게시물 삭제하는 update문// delete는 쓰지 않는다!  -->
+	<!-- <update id="delBbs" parameterType="java.util.Map">
+	UPDATE bbs_t SET status = 1
+	WHERE b_idx = #{b_idx} AND pwd = #{pw}
+	</update> -->
+
+	<!--게시물 수정하는 update문-->
+	<update id="qb_edit" parameterType="silver.web.board.vo.QNABoardVO">
+	UPDATE QNABOARD
+	SET qb_subject = #{qb_subject}, 
+		qb_content = #{qb_content}
+	WHERE qb_num = #{qb_num}
+	</update>
+	
+	<!--조회수를 증가하는 update문-->
+	<update id="update_readcount" parameterType="String">
+	update QNABOARD
+	set qb_readcount = qb_readcount+1
+	where qb_num = #{qb_num}
+	</update>
+	
+	<!--답변을 삭제하는 delete문-->
+	<delete id="qb_del" parameterType="String">
+		delete from QNABOARD
+		where qb_num = #{qb_num}
+	</delete>
+
+</mapper>
