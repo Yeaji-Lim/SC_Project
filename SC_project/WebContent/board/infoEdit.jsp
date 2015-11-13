@@ -19,7 +19,7 @@
 </script>
 </head>
 <jsp:include page="../header.jsp"></jsp:include>
-<jsp:include page="../navi.jsp"></jsp:include>
+<jsp:include page="../board_navi.jsp"></jsp:include>
 <body>
 
 	<form action="edit.sc" method="post" 

@@ -22,7 +22,7 @@ function check(ff){
 </script>
 </head>
 <jsp:include page="../header.jsp"></jsp:include>
-<jsp:include page="../navi.jsp"></jsp:include>
+<jsp:include page="../board_navi.jsp"></jsp:include>
 <body>
 	<form action="qb_edit.sc" method="post" id="qbEdit">
 	<input type="hidden" name="qb_num" value="${vo.qb_num }"/>

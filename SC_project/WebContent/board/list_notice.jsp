@@ -18,10 +18,12 @@
 	다운로드 후 압축해제한다.
  --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
 
 <link href="text.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">
 	function msg() {
 		alert("로그인이 필요합니다");
@@ -36,7 +38,7 @@
 
 </head>
 <jsp:include page="../header.jsp"></jsp:include>
-<jsp:include page="../navi.jsp"></jsp:include>
+<jsp:include page="../board_navi.jsp"></jsp:include>
 <body topmargin=0 leftmargin=0 marginwidth="0" marginheight="0">
 
 <!--주요내용시작 -->

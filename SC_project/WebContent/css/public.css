@@ -5,7 +5,7 @@ html, body {
 }
 
 #header {
-	z-index: 9999;
+	z-index: 999;
 	position: fixed;
 	width: 100%;
 	height: 100px;
@@ -13,64 +13,114 @@ html, body {
 	background: #fff;
 }
 
-#mypage{
-	position:absolute;margin:0 ;width:100% ; z-index:100000;	
+#mypage {
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	z-index: 10000;
 }
 
-#top_link 					{position:relative;margin:0 0 0 760px;height:0px;z-index:109;}
-.top_link_ul					{float:right;list-style:none;height:22px;}
-.top_link_ul li					{margin:4px 0 0 0;float:left;list-style:none;}
-.top_link_li01					{padding-right:10px; background:url("/SWS/image/link_line.gif") no-repeat right top;}
-.top_link_li02					{padding:0 5px 0 0;}
-.top_link_ul li	a				{font-size:11px;color:#999;letter-spacing:-1px;}
+#top_link {
+	position: relative;
+	margin: 0 0 0 760px;
+	height: 20px;
+	z-index: 10000;
+}
+
+.top_link_ul {
+	float: right;
+	list-style: none;
+	height: 22px;
+}
+
+.top_link_ul li {
+	margin: 4px 0 0 0;
+	float: left;
+	list-style: none;
+}
+
+.top_link_li01 {
+	padding-right: 10px;
+}
+
+.top_link_ul li	a {
+	font-size: 15px;
+	color: black;
+	letter-spacing: -1px;
+}
 
 /*  ▼ 탑메뉴  (히든레이어) ===================================*/
-
-#top_navi							{position:absolute;margin:0;width:950px;padding:20px;height: ;z-index:15; } /* 탑 메뉴 부분 */
-#top_logo						{position:absolute;width:150px; float:left;padding:0px 0 0 20px;}  /*  상단 로고 */
-#top_navi #top_navi_mainmenu	{position:absolute;margin:28px 0 0 230px;width:730px;list-style:none;  }
-#top_navi #top_navi_mainmenu_shop	{position:absolute;margin:-20px 0 0 0;width:730px;list-style:none;  }
-#top_navi li						{margin:0 ;list-style:none; text-align:center; width:103px;float:left; color:#222;font-size:15px;line-height:40px;font-weight:bold; font-family:NanumGothic, '나눔고딕','맑은 고딕'; letter-spacing:-1px;}
-
-#top_navi li ul					{position:absolute; width:103px;display:none;list-style:none; background-color:#fff; border:2px solid #ec5900; font-size:12px; z-index:10;}
-#top_navi li ul li				{padding:0 0 0 0px;font-size:12px; font-weight:normal;}
-#top_navi li ul.sub1			{margin:0;top:40px;left:0px; visibility:; width:99px; z-index:16; }
-#top_navi li ul.sub2			{margin:0;top:40px;left:103px; visibility:; width:99px; z-index:16; }
-#top_navi li ul.sub3			{margin:0;top:40px;left:206px; visibility:; width:99px; z-index:16; } 
-#top_navi li ul.sub4			{margin:0;top:40px;left:309px; visibility:; width:99px; z-index:16; } 
-#top_navi li ul.sub5			{margin:0;top:40px;left:412px; visibility:; width:99px; z-index:16; } 
-#top_navi li ul.sub6			{margin:0;top:40px;left:515px; visibility:; width:99px; z-index:16; } 
-#top_navi li ul.sub7			{margin:0;top:40px;left:618px; visibility:; width:99px; z-index:16; } 
- 
-.sub1 a, .sub2 a, .sub3 a, .sub4 a , .sub5 a , .sub6 a , .sub7 a {   }
- 
- 
- 
-/*  ▲ 탑메뉴  */
-#menu1						{padding-left:0px;}
- 
-li.main_menu			{margin:0 ;list-style:none; text-align:center; width:103px;float:left; color:#fff !important; background-color:#ffffff;font-size:15px;line-height:40px;font-weight:bold; font-family:NanumGothic, '나눔고딕','맑은 고딕'; letter-spacing:-1px; height:40px;} 
-li.main_menu_sel			{margin:0 ;list-style:none; text-align:center; width:103px;float:left; color:#fff !important; background-color:#ec5900;font-size:15px;line-height:40px;font-weight:bold; font-family:NanumGothic, '나눔고딕','맑은 고딕'; letter-spacing:-1px;height:40px;} 
-
-
-.topmenu_a01:link, .topmenu_a01:visited, .topmenu_a01:active	{margin:0 ;list-style:none; text-align:center; width:103px;float:left; color:#222;font-size:15px;line-height:40px;font-weight:bold; font-family:NanumGothic, '나눔고딕','맑은 고딕'; } 
-.topmenu_a01:hover				{margin:0 ;list-style:none; text-align:center; width:103px;float:left; color:#fff !important; background-color:#ec5900;font-size:15px;line-height:40px;font-weight:bold; font-family:NanumGothic, '나눔고딕','맑은 고딕'; }
-
-.topmenu_a01_on:link, .topmenu_a01_on:visited, .topmenu_a01_on:active	{margin:0 ;list-style:none; text-align:center; width:103px;float:left; color:#fff;font-size:15px;line-height:40px;font-weight:bold; font-family:NanumGothic, '나눔고딕','맑은 고딕'; } 
-.topmenu_a01_on:hover				{margin:0 ;list-style:none; text-align:center; width:103px;float:left; color:#fff !important; background-color:#ec5900;font-size:15px;line-height:40px;font-weight:bold; font-family:NanumGothic, '나눔고딕','맑은 고딕'; }
-
-.topmenu_a02:link, .topmenu_a02:visited, .topmenu_a02:active			{font-size:12px; }
-.topmenu_a02:hover			{font-size:12px;}
-
-
-
-#logo{
+#top_navi {
+	position: absolute;
+	margin: 0;
+	left: 50px;
+	width: 950px;
+	padding: 20px;
+	height: 50px;
+	z-index: 15;
+} /* 탑 메뉴 부분 */
+#top_logo {
 	display: block;
+	position: absolute;
+	float: left;
+	padding: 0px 0 0 20px;
+	z-index: 10000;
+} /*  상단 로고 */
+
+/* 탑 메뉴 네비게이션 */
+#top_navi{
+	position: absolute;
+	left:250px;
+	width: 1200px;
+	height:50px;
+	margin-top:5px;
 }
 
-#banner{
+
+#top_navi ul li{
+	display:block;
+	background:#fff;
+	padding:10px;
+	margin-right:10px;
+	list-style:none;
+	float:left;
+	text-align:center;
+	width: 180px;
+}
+
+
+#top_navi ul li:hover{	
+	list-style: none;
+	text-align: center;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: bold;
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	background-color: #FFBB00 !important;
+}
+
+
+#top_navi ul li a{
+	display:block;
+	list-style: none;
+	text-align: center;
+	font-size: 18px;
+	line-height: 30px;
+	
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	color:#222;
+	text-decoration: none;
+}
+
+
+
+
+
+/* 탑 메뉴 네비게이션 */
+
+#banner {
 	position: fixed;
-	margin-top: 18px;
+	margin-top: 100px;
 }
 
 #topmenu {
@@ -84,12 +134,12 @@ li.main_menu_sel			{margin:0 ;list-style:none; text-align:center; width:103px;fl
 }
 
 #topmenu li {
-	float:left;
+	float: left;
 	width: 117px;
 	height: 48px;
-	list-style:none;
-	margin-right:5px;
-	background-color:#fff;
+	list-style: none;
+	margin-right: 5px;
+	background-color: #fff;
 }
 /* ul#topmenu li a{display:inline; background:#123456; margin:2px 0; padding:5px; color:#fff; font:bold 1em arial;
 						text-decoration:none;} */

@@ -10,13 +10,12 @@
 </head>
 <body>
 
-	<div id="nav">
-		<p>게시판</p>
+	<div id="b_nav">
+		<p id="board_navi">게시판</p>
 		 <ul>
 				<li><a href="notice.sc">공지사항</a></li>
 				<li><a href="qb_list.sc">문의사항</a></li>
 				<li><a href="freelist.sc">자유게시판</a></li>
-				<li><a href="info.sc">정보게시판</a></li>
 			</ul>
 	</div>
  		

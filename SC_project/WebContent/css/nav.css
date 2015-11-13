@@ -1,4 +1,4 @@
-#nav{
+#b_nav{
 	z-index:10000;
 	position:fixed;
 	top:250px;
@@ -6,4 +6,21 @@
 	width:200px;
 	height:519px;
 	background:red;
+}
+
+#board_navi{
+	
+}
+
+#board_navi ul{
+	
+	
+}
+
+#board_navi ul li{
+	
+}
+
+#board_navi ul li a{
+	
 }
