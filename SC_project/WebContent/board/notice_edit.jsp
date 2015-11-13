@@ -12,11 +12,22 @@
 	}
 </style>
 <script type="text/javascript">
-	function check(ff){
-		//유효성 검사
-		
-		ff.submit();
+function check(ff){
+	
+	var title = document.forms[0].title.value;
+	var content = document.forms[0].content.value;
+	
+	if(title==""){
+		alert("제목입력해");
+		return;
 	}
+	if(content==""){
+		alert("내용입력해");
+		return;
+	}
+	
+	ff.submit();
+}
 </script>
 </head>
 

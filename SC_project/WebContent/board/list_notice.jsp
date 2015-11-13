@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">
 	function msg() {
-		alert("로그인이 필요합니다");
+		alert("운영자만 사용할 수 있습니다");
 	}
 </script>
 

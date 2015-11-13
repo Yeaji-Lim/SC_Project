@@ -12,11 +12,11 @@
 
 	<div id="b_nav">
 		<p id="board_navi">게시판</p>
-		 <ul>
+		 <ul class="navi_ul">
 				<li><a href="notice.sc">공지사항</a></li>
 				<li><a href="qb_list.sc">문의사항</a></li>
 				<li><a href="freelist.sc">자유게시판</a></li>
-			</ul>
+		 </ul>
 	</div>
  		
 

@@ -1,26 +1,53 @@
 #b_nav{
-	z-index:10000;
-	position:fixed;
+	z-index:100;
+	position:absolute;
 	top:250px;
 	left:0;
 	width:200px;
 	height:519px;
-	background:red;
+	padding-left: 40px;
 }
 
 #board_navi{
+	float: left; /* 왼쪽부터 표시 */
+	height: 40px;
+	width: 100px;
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-weight: 50;
+	font-size: 20px;
+	text-align: center;
+	background-color: pink;
+	margin-left: 25px;
+}
+
+.navi_ul{
+	width: 150px;
+	margin-top:0;
+	display: inline;
+	z-index: 1000;
+	float: left; /* 왼쪽부터 표시 */
+	position: relative; /* 순서대로 표시 */
+	padding: 0; /* 안여백 없음 */
+	line-height: 40px; /* 줄간격 */
 	
 }
 
-#board_navi ul{
-	
-	
-}
-
-#board_navi ul li{
+.navi_ul li{
+	list-style: none;
+	border-bottom: 1px solid black;
+	padding-left: 28px;
 	
 }
 
-#board_navi ul li a{
-	
+.navi_ul li a { /* 메뉴 항목에서도 링크에 대한 스타일 */
+	display: inline; /* 영역을 만듦 */
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-weight:100; /* 진하게 */
+	font-size:20px;	/* 글자크기 */
+	color: black; /* 메인 메뉴 글자색 */
+	text-decoration: none; /* 밑줄 없앰 */
+}
+
+.navi_ul li a:hover{
+	color:#F90; /* 마우스 오버했을 때 글자색 */
 }

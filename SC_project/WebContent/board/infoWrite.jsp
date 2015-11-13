@@ -1,3 +1,4 @@
+<%@page import="silver.web.member.vo.LoginVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>    
@@ -8,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-#infoWrite{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+ #infow{position:relative; width:600px; heigth:auto; margin:0 auto; margin-top:255px;}
 </style>
 <script type="text/javascript">
 	function check(ff){
@@ -32,8 +33,10 @@
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
 <jsp:include page="../board_navi.jsp"></jsp:include>
-
-		<form action="infowrite.sc" method="post" enctype="multipart/form-data" id="infoWrite">
+<%
+	LoginVO login = (LoginVO)session.getAttribute("login_ok");
+%>
+	<form action="infowrite.sc" method="post" id="infow">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
@@ -42,7 +45,7 @@
           <td align="center" height="10"></td>
         </tr>
         <tr>
-          <td align="center"><u><b>BBS 글쓰기</b></u></td>
+          <td align="center"><u><b>정보게시판 글쓰기</b></u></td>
         </tr>
         <tr>
           <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -59,29 +62,23 @@
 
                     <tr>
                       <td width="90" height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">작성자</font></td>
-                      <td bgcolor="#F2F7F9" align="left"> <input type="text" name="writer" value="${login_ok.nickname }" 
-                      readonly="readonly" font-color="gray";
-                      cssStyle="width:100px" theme="simple"/></td>
+                      <td bgcolor="#F2F7F9" align="left"> <input type="text" name="writer" cssStyle="width:100px" 
+                      theme="simple" value="<%=login.getName()%>" readonly="readonly"/></td>
                     </tr>
-					
+
                     <tr>
                       <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">제목</font></td>
-                      <td bgcolor="#F2F7F9" align="left"> <input type="text" id="title" name="title" size="50" theme="simple"/></td>
+                      <td bgcolor="#F2F7F9" align="left"> <input type="text" name="title" size="50" theme="simple"/></td>
                     </tr>
                     <tr>
                       <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">내용</font></td>
-                      <td bgcolor="#F2F7F9" align="left"> <textarea id="content" name="content" cols="50" rows="10" theme="simple"></textarea></td>
+                      <td bgcolor="#F2F7F9" align="left"> <textarea name="content" cols="50" rows="10" theme="simple"></textarea></td>
                     </tr>
-                    <tr>
-                      <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">첨부파일</font></td>
-                      <td bgcolor="#F2F7F9" align="left">
-                        <input type="file" name="upload" cssStyle="width:300px" theme="simple"/>
-                      	
-                      </td>
-                    </tr>
-                    <tr>
-                       <input type="hidden" value="1" name="pwd" cssStyle="width:200px" theme="simple"/>
-                    </tr>
+                    <!-- <tr>
+                      <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">비밀번호</font></td>
+                      <td bgcolor="#F2F7F9" align="left"> <input type="password" name="pwd" cssStyle="width:200px" theme="simple"/>
+                        <font color="#0066CC">* 삭제.수정시 필요</font> </td>
+                    </tr> -->
                   </table></td>
               </tr>
             </table>
@@ -98,6 +95,7 @@
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
                       <input type="reset" value="재입력"/>
+                      <input type="hidden" value="1" name="pwd"/>
                       </td>
                     </tr>
                   </table></td>
@@ -112,6 +110,7 @@
   </tr>
 </table>
 	</form>
+		
 </body>
 </html>
 

@@ -8,11 +8,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>문의사항 글쓰기</title>
 <script type="text/javascript">
-	function check(ff){
-		//유효성 검사
-		
-		ff.submit();
+function check(ff){
+	
+	var title = document.forms[0].title.value;
+	var content = document.forms[0].content.value;
+	
+	if(title==""){
+		alert("제목입력해");
+		return;
 	}
+	if(content==""){
+		alert("내용입력해");
+		return;
+	}
+	
+	ff.submit();
+}
 </script>
 <style type="text/css">
 	#qbWrite{
@@ -52,7 +63,8 @@
 
                     <tr>
                       <td width="90" height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">작성자</font></td>
-                      <td bgcolor="#F2F7F9" align="left"> <input type="text" name="qb_writer" cssStyle="width:100px" theme="simple" value="<%=login.getName()%>" readonly="readonly"/></td>
+                      <td bgcolor="#F2F7F9" align="left"> <input type="text" name="qb_writer" cssStyle="width:100px" 
+                      theme="simple" value="<%=login.getName()%>" readonly="readonly"/></td>
                     </tr>
 
                     <tr>

@@ -3,7 +3,6 @@ package silver.web.board.control;
 import java.io.File;
 
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -43,7 +42,6 @@ public class InfoWriteControl {
 	
 	@RequestMapping(value="/infowrite.sc", method=RequestMethod.POST)
 	public ModelAndView write(BbsVO vo) throws Exception{
-		
 		
 		if(vo.getUpload().getSize()>0){
 			
