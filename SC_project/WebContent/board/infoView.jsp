@@ -24,6 +24,10 @@
 
 <link href="text.css" rel="stylesheet" type="text/css">
 
+<style type="text/css">
+#infoList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+</style>
+
 <script type="text/javascript">
 	function download(fname){
 	
@@ -45,10 +49,11 @@
 	
 </script>
 </head>
-
+<jsp:include page="../header.jsp"></jsp:include>
+<jsp:include page="../navi.jsp"></jsp:include>
 <body>
 
-<table width="556" border="0" cellspacing="0" cellpadding="0" align="center">
+<table width="556" border="0" cellspacing="0" cellpadding="0" align="center" id="infoList">
 
 
 		  <tr>

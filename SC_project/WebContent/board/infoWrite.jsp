@@ -7,6 +7,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+#infoWrite{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+</style>
 <script type="text/javascript">
 	function check(ff){
 		
@@ -27,8 +30,10 @@
 </script>
 </head>
 <body>
-<%-- <jsp:include page="index.jsp"></jsp:include> --%>
-		<form action="infowrite.sc" method="post" enctype="multipart/form-data">
+<jsp:include page="../header.jsp"></jsp:include>
+<jsp:include page="../navi.jsp"></jsp:include>
+
+		<form action="infowrite.sc" method="post" enctype="multipart/form-data" id="infoWrite">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
