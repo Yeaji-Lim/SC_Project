@@ -75,7 +75,7 @@ public class LoginControl {
 		dao.add(vo);
 
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/index");
+		mv.setViewName("/mypage/regSuccess");
 
 		return mv;
 

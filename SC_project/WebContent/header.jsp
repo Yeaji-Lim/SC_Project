@@ -25,10 +25,9 @@
 			<%
 				} else {
 			%>
-			<li class="top_link_li01"><a href="#top"
-				onclick="javascript:window.open('/mypage/regForm.sc','','left=50, top=50, width=600, height=400, scrollbars=0');"
+			<li class="top_link_li01"><a href="#" onclick="javascript:window.open('/myPage/regForm.sc','','left=50, top=50, width=600, height=400, scrollbars=0');"
 				class="outlogin_a">회원가입</a></li>
-			<li class="top_link_li01"><a href="/mypage/login.sc">로그인</a></li>
+			<li class="top_link_li01"><a href="/myPage/login.sc">로그인</a></li>
 			<%
 				}
 			%>

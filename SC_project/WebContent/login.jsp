@@ -157,7 +157,7 @@ div#reg {
 							<label for="tel">tel:</label> <input type="text" name="tel"
 								id="tel" size="8" /><br /> <label for="pwd">pwd:</label> <input
 								type="password" name="pwd" id="pwd" size="8" /><br /> <input
-								type="button" value="Registry" onclick="regView()" /> <input
+								type="button" value="Registry" onclick="javascript:window.open('/myPage/regForm.sc','','left=50, top=50, width=600, height=400, scrollbars=0');"" /> <input
 								type="button" value="Login" id="log_bt" onclick="login()" />
 						</fieldset>
 					</form>
@@ -172,7 +172,7 @@ div#reg {
 		
 %>
 			<div id="g_form">
-				<span class="u_name">${vo.name } </span> (<span class="u_id">${vo.tel }
+				<span class="u_name">${login_ok.name } </span> (<span class="u_id">${login_ok.tel }
 				</span>)님 환영합니다.
 				<p>
 					<input type="button" value="Logout" onclick="logout()" />
@@ -184,7 +184,7 @@ div#reg {
 			<% 
 	}//if문의 끝!
 %>
-			<div id="reg">
+			<!-- <div id="reg">
 				<form action="reg.sc" method="post">
 					<fieldset>
 						<legend>
@@ -256,7 +256,7 @@ div#reg {
 					</fieldset>
 				</form>
 			</div>
-
+ -->
 		</div>
 	</div>
 

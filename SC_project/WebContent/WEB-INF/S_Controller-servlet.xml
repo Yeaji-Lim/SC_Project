@@ -12,6 +12,13 @@
     <!--로그인 bean-->
     <bean id="login" class="silver.web.member.control.LoginControl" autowire="byName"/>
     
+    <!--회원가입 bean  -->
+    <bean name="regForm.sc"
+	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" 
+			value="myPage/regForm"/>
+	</bean>
+	
     <!--문의사항 보여주는 bean-->
     <bean id="qblist" class="silver.web.board.control.QNAListControl" autowire="byName"/>
 		
