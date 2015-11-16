@@ -10,6 +10,7 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 	div#del_win{
 		position: absolute;

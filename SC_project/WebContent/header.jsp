@@ -2,16 +2,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="css/public.css" type="text/css" />
-<title>Web Project</title>
 
-</head>
-<body>
 	<% LoginVO login = (LoginVO)session.getAttribute("login_ok"); %>
+<script type="text/javascript">
+function openReg(){
+	
+	open('reg.sc','','left=50, top=50, width=400, height=410, scrollbars=0');
+}
+</script>
+
 
 	<div id="top_link">
 		<ul class="top_link_ul">
@@ -20,14 +19,13 @@
 			<%
 				if (login != null) {
 			%>
-			<li class="top_link_li01"><a href="/mypage/mypage.sc">마이페이지</a></li>
-			<li class="top_link_li01"><a href="/mypage/logout.sc">로그아웃</a></li>
+			<li class="top_link_li01"><a href="mypage.sc">마이페이지</a></li>
+			<li class="top_link_li01"><a href="logout.jsp">로그아웃</a></li>
 			<%
 				} else {
 			%>
-			<li class="top_link_li01"><a href="#" onclick="javascript:window.open('/myPage/regForm.sc','','left=50, top=50, width=600, height=400, scrollbars=0');"
-				class="outlogin_a">회원가입</a></li>
-			<li class="top_link_li01"><a href="/myPage/login.sc">로그인</a></li>
+			<li class="top_link_li01"><a href="javascript:openReg()" class="outlogin_a">회원가입</a></li>
+			<li class="top_link_li01"><a href="login.sc">로그인</a></li>
 			<%
 				}
 			%>
@@ -83,5 +81,4 @@
 	</div>
 
 
-</body>
-</html>
+

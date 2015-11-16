@@ -18,6 +18,7 @@
 <head>
 
 <link href="text.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 	#frList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
 </style>

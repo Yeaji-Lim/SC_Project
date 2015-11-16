@@ -12,6 +12,7 @@
 
 <html>
 <head>
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 	#notiView{
 		position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;

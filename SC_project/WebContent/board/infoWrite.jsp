@@ -8,6 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
  #infow{position:relative; width:600px; heigth:auto; margin:0 auto; margin-top:255px;}
 </style>
@@ -32,7 +33,6 @@
 </head>
 <body>
 <jsp:include page="../header.jsp"></jsp:include>
-<jsp:include page="../board_navi.jsp"></jsp:include>
 <%
 	LoginVO login = (LoginVO)session.getAttribute("login_ok");
 %>

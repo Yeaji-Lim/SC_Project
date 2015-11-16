@@ -64,21 +64,6 @@ public class LoginControl {
 	}
 
 
-	@RequestMapping(value="reg.sc", method=RequestMethod.POST)
-	public ModelAndView reg(LoginVO vo) throws Exception{
-
-		String[] s_phone = request.getParameterValues("tel");
-		String s_tel = makeString(s_phone);
-
-		vo.setTel(s_tel);
-
-		dao.add(vo);
-
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/mypage/regSuccess");
-
-		return mv;
-
-	}
+	
 
 }

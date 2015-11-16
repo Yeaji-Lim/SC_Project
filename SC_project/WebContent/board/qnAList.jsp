@@ -16,7 +16,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 
 <style>
 	#qbList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}

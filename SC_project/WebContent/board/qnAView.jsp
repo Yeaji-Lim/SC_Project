@@ -12,7 +12,7 @@
 
 <html>
 <head>
-
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <link href="text.css" rel="stylesheet" type="text/css">

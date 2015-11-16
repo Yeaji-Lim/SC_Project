@@ -50,7 +50,7 @@ function reg(){
 				<form action="reg.sc" method="post">
 					<fieldset>
 						<legend>
-							<img src="../img/reg.png" />
+							<img src="img/reg.png" />
 						</legend>
 						<table cellpadding="4" cellspacing="0">
 							<tfoot>
@@ -62,12 +62,12 @@ function reg(){
 							<tbody>
 								<tr>
 									<td class="title"><label for="name"><img
-											src="../img/name.png"></label></td>
-									<td><input type="text" name="name" id="이름" size="12" /></td>
+											src="img/name.png"></label></td>
+									<td><input type="text" name="name" id="name" size="12" /></td>
 								</tr>
 								<tr>
 									<td class="title"><label for="id"><img
-											src="../img/gender.png"></label></td>
+											src="img/gender.png"></label></td>
 									<td><select name="gender">
 											<option value="male">남</option>
 											<option value="female">여</option>
@@ -75,12 +75,12 @@ function reg(){
 								</tr>
 								<tr>
 									<td class="title"><label for="birth"><img
-											src="../img/birth.png"></label></td>
-									<td><input type="text" name="birth" id="생년월일" size="8" /></td>
+											src="img/birth.png"></label></td>
+									<td><input type="text" name="birth" id="birth" size="8" /></td>
 								</tr>
 								<tr>
 									<td class="title"><label for="phone"><img
-											src="../img/phone.png"></label></td>
+											src="img/phone.png"></label></td>
 									<td><select name="tel">
 											<option value="010">010</option>
 											<option value="011">011</option>
@@ -93,25 +93,25 @@ function reg(){
 								</tr>
 								<tr>
 									<td class="title"><label for="pwd"><img
-											src="../img/pwd.png"></label></td>
-									<td><input type="password" name="pwd" id="비밀번호" size="12" /></td>
+											src="img/pwd.png"></label></td>
+									<td><input type="password" name="pwd" id="pwd" size="12" /></td>
 								</tr>
 								<tr>
 									<td class="title"><label for="repwd"><img
-											src="../img/pwd.png"></label></td>
+											src="img/pwd.png"></label></td>
 									<td><input type="password" name="repwd" id="repwd"
 										size="12" /></td>
 								</tr>
 								<tr>
 									<td class="title"><label for="nickname"><img
-											src="../img/nickname.png"></label></td>
-									<td><input type="text" name="nickname" id="별명"
+											src="img/nickname.png"></label></td>
+									<td><input type="text" name="nickname" id="nickname"
 										size="30" /></td>
 								</tr>
 								<tr>
 									<td class="title"><label for="addr"><img
-											src="../img/addr.png"></label></td>
-									<td><input type="text" name="addr" id="주소" size="30" /></td>
+											src="img/addr.png"></label></td>
+									<td><input type="text" name="addr" id="addr" size="30" /></td>
 								</tr>
 							</tbody>
 						</table>

@@ -23,6 +23,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 	#infoList{
 	position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;
@@ -38,7 +39,6 @@
 
 </head>
 <jsp:include page="../header.jsp"></jsp:include>
-<jsp:include page="../board_navi.jsp"></jsp:include>
 <body topmargin=0 leftmargin=0 marginwidth="0" marginheight="0">
 
 <!--주요내용시작 -->

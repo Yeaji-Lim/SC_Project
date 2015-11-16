@@ -12,13 +12,9 @@
     <!--로그인 bean-->
     <bean id="login" class="silver.web.member.control.LoginControl" autowire="byName"/>
     
-    <!--회원가입 bean  -->
-    <bean name="regForm.sc"
-	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
-		<property name="viewName" 
-			value="myPage/regForm"/>
-	</bean>
-	
+    <!--회원가입 bean -->
+    <bean id="reg" class="silver.web.member.control.RegControl" autowire="byName"/>
+    
     <!--문의사항 보여주는 bean-->
     <bean id="qblist" class="silver.web.board.control.QNAListControl" autowire="byName"/>
 		
@@ -88,42 +84,66 @@
 	</bean>
 	
 	
-		<!-- JSP로 직접 이동시 -->
+		<!-- 정보게시판 쓰기 -->
 	<bean name="/infowriteForm.sc"
 	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
 		<property name="viewName" 
 			value="/board/infoWrite"/>
 	</bean>
 	
-	<!-- 원글을 저장하는 bean -->
+	<!-- 정보게시판 쓰기 bean -->
 	<bean id="infowrite" 
 	class="silver.web.board.control.InfoWriteControl">
 		<property name="uploadPath" 
 			value="/upload"/>
 	</bean>
 	
-	<!-- 게시물 보기 -->
+	<!-- 정보게시물 보기 -->
 	<bean name="/view.sc" 
 	   class="silver.web.board.control.InfoViewControl" 
 	   autowire="byName"/>
 	   
-	<!-- 게시물 수정 -->
+	<!-- 정보게시물 수정 -->
 	<bean id="infoedit" 
 	class="silver.web.board.control.InfoEditControl">
 		<property name="uploadPath"
 		 value="/upload"/>
 	</bean>   
 	
+	<!--정보게시판 답변  -->
 	<bean id="infoanswer" class="silver.web.board.control.InfoAnswerControl">
 		<property name="uploadPath" value="/upload"/>
 	</bean>
-	
+	<!--정보게시판 댓글  -->
 	<bean id="infocomment"
 	class="silver.web.board.control.InfoAddAnsControl" autowire="byName"/>
-	
+	<!--정보게시판 삭제  -->
 	<bean id="infobbsDel" class="silver.web.board.control.InfoDelControl"/>
-	
+	<!--정보게시판 댓글 삭제  -->
 	<bean id="infodelComm" class="silver.web.board.control.InfodelCommControl"/>
+	
+	<!-- 쪽지 리스트 -->
+	<bean name="/msglist.sc" 
+	class="silver.web.message.control.Msg_list_Control">
+	<property name="dao" ref="mgdao"></property>
+	</bean>
+	<!-- 쪽지 보기 -->
+	<bean name="/msgview.sc" class="silver.web.message.control.Msg_ViewControl">
+		<property name="dao" ref="mgdao"></property>
+	</bean>
+	<!-- 쪽지쓰기 -->
+	<bean id="msg_write" class="silver.web.message.control.Msg_WriteControl" autowire="byName">
+	</bean>
+	<!-- 쪽지쓰기 폼 -->
+	<bean name="/msgwrite.sc"
+	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" 
+			value="msg_write"/>
+	</bean>
+	<!-- 쪽지삭제 -->
+	<bean name="/msg_del.sc" class="silver.web.message.control.Msg_DelControl" autowire="byName">
+		<property name="dao" ref="mgdao"></property>
+	</bean>
 	
 	
 	

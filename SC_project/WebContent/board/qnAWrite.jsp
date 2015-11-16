@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>문의사항 글쓰기</title>
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">
 function check(ff){
 	

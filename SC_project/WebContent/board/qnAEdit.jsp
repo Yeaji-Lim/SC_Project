@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 	#qbEdit{
 		position:relative; width:600px; height:auto; margin:0 auto; margin-top:260px;

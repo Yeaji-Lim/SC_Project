@@ -35,12 +35,18 @@
 	
 </style>
 
+<script type="text/javascript">
+	function openReg1(){
+	
+		window.open('reg.sc','','left=50, top=50, width=600, height=400, scrollbars=0');
+	}
 
+</script>
 </head>
+
+<body topmargin=0 leftmargin=0 marginwidth="0" marginheight="0">
 <jsp:include page="../header.jsp"></jsp:include>
 <jsp:include page="../board_navi.jsp"></jsp:include>
-<body topmargin=0 leftmargin=0 marginwidth="0" marginheight="0">
-
 <!--주요내용시작 -->
 <form name="ff2" method="post" id="notiList">
 

@@ -12,7 +12,7 @@
 
 <html>
 <head>
-
+<link rel="stylesheet" href="css/public.css" type="text/css" />
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -50,7 +50,6 @@
 </script>
 </head>
 <jsp:include page="../header.jsp"></jsp:include>
-<jsp:include page="../board_navi.jsp"></jsp:include>
 <body>
 
 <table width="556" border="0" cellspacing="0" cellpadding="0" align="center" id="infoList">
