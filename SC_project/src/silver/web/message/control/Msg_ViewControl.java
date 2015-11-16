@@ -36,7 +36,7 @@ public class Msg_ViewControl implements Controller {
 		mv.addObject("vo", vo);
 		mv.addObject("nowPage", nowPage);
 		mv.addObject("b_idx", b_idx);
-		mv.setViewName("/msg_view");
+		mv.setViewName("/msg/msg_view");
 		
 		return mv;
 	}

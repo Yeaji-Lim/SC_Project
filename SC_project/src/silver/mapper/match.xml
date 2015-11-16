@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="match">
+
+	<!--페이징 기법을 위한 전체 게시물의 수를 반환-->
+  	<select id="totalCount" resultType="int">
+  		select count(*) from matchboard
+  	</select>
+	
+	
+	<!-- 페이징 기법을 활용한 select -->
+	<select id="mbList" 
+	parameterType="java.util.Map" 
+	resultType="silver.web.matching.vo.MatchingVO">
+		SELECT * FROM (
+			SELECT rownum r_num,a.* FROM(
+				SELECT * FROM matchboard
+				ORDER BY mb_num DESC 
+			) a
+		) WHERE r_num BETWEEN #{begin} AND #{end}
+	</select>
+	
+	
+	
+	<!--매칭 게시판 insert-->
+  <insert id="mb_write" parameterType="silver.web.matching.vo.MatchingVO">
+  	INSERT INTO matchboard(mb_num, mb_subject, mb_writer, mb_content, mb_regdate, mb_status, mb_city, mb_state,mb_location) 
+  	VALUES(seq_fb_num.NEXTVAL,#{mb_subject},#{mb_writer},#{mb_content},SYSDATE,0,#{mb_city},#{mb_state},#{mb_location})
+  </insert>
+
+		
+	<!--매칭 게시판 보기 select-->
+	<select id="mb_view" parameterType="String" resultType="silver.web.matching.vo.MatchingVO">
+		SELECT * FROM matchboard
+		WHERE mb_num = #{mb_num}
+	</select>
+	
+	<!--게시물 삭제하는 update문// delete는 쓰지 않는다!  -->
+	<update id="mb_del" parameterType="String">
+	UPDATE matchboard SET mb_status = 1
+	WHERE mb_num = #{mb_num}
+	</update>
+
+	<!--게시물 수정하는 update문-->
+	<update id="mb_edit" parameterType="silver.web.matching.vo.MatchingVO">
+	UPDATE matchboard
+	SET mb_subject = #{mb_subject}, 
+		mb_content = #{mb_content},
+		mb_city = #{mb_city}, 
+		mb_state = #{mb_state}
+	WHERE mb_num = #{mb_num}
+	</update>
+
+</mapper>

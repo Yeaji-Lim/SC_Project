@@ -35,4 +35,5 @@
 	<bean id="frdao" class="silver.web.board.dao.FreeBoardDAO" autowire="byName"/>	
 	<bean id="infoDAO" class="silver.web.board.dao.BbsDAO" autowire="byName"/>
 	<bean id="mgdao" class="silver.web.message.dao.MsgDAO" autowire="byName"/> 
+	<bean id="mbdao" class="silver.web.matching.dao.MatchingDAO" autowire="byName"/>
 </beans>

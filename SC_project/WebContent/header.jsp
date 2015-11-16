@@ -7,7 +7,7 @@
 <script type="text/javascript">
 function openReg(){
 	
-	open('reg.sc','','left=50, top=50, width=400, height=410, scrollbars=0');
+	open('reg.sc','','left=50, top=50, width=420, height=410, scrollbars=0');
 }
 </script>
 
@@ -57,7 +57,7 @@ function openReg(){
 				</span></li>
 
 				<li id="menu3" class="main_menu fl"><span class="main_menu">
-						<a href="" class="topmenu_a01">요양사를 소개합니다</a>
+						<a href="mb_list.sc" class="topmenu_a01">요양사를 소개합니다</a>
 				</span></li>
 
 				<li id="menu7" class="main_menu fl"><span class="main_menu">

@@ -18,6 +18,7 @@
 <body>
 
 	<form action="msg_write.sc" method="POST">
+	<input type="hidden" name="send_tel" value="${vo.mb_writer }"/>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
@@ -47,7 +48,7 @@
                     </tr>
 					<tr>
 						<td width="90" height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">받는사람</font></td>
-						<td bgcolor="#F2F7F9" align="left"> <input type="text" name="requesttel" cssStyle="width:100px" theme="simple"/></td>
+						<td bgcolor="#F2F7F9" align="left"> <input type="text" name="requesttel" cssStyle="width:100px" theme="simple" value="${vo.mb_writer} "/></td>
                     <tr>
                       <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">제목</font></td>
                       <td bgcolor="#F2F7F9" align="left"> <input type="text" name="subject" size="50" theme="simple"/></td>

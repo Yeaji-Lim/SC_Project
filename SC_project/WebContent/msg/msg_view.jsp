@@ -18,7 +18,7 @@
 <body>
 <table width="556" border="0" cellspacing="0" cellpadding="0" align="center">
 		  <tr>
-		    <td align="center"><u><b>공지사항</b><u></td>
+		    <td align="center"><u><b>쪽지보기</b></u></td>
 		  </tr>
 		  <tr>
 			<td height="2" bgcolor="#C3C3C3"></td>
@@ -61,7 +61,7 @@
 					&nbsp;
 				  </td>
 				  <td width="241" align="right">
-					<img src="img/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='msglist.sc?nowPage=${nowPage}'" style="cursor:pointer">
+					<img src="img/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='msg_list.sc?nowPage=${nowPage}'" style="cursor:pointer">
 					<img src="img/button/but_undel.gif" width="56" height="21" onClick="javaScript:location.href='msg_del.sc?b_idx=${b_idx}'" }>
 					
 					</td>

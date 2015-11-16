@@ -22,8 +22,8 @@ public class MsgDAO {
 	}
 	//표현할 게시물 목록을 반환
 	public MsgVO[] getList(Map<String, String> m){
-		List<MsgVO> list = template.selectList("msg.msg_list", m); //오류나는부분
-		System.out.println(list.size());
+		List<MsgVO> list = template.selectList("msg.msg_list", m);
+		//System.out.println(list.size());
 		// 받은 list 구조를 다시 배열로 변환 
 		
 		MsgVO[] ar = null;

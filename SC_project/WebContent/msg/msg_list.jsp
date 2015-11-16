@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="java.util.List %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -22,7 +21,7 @@
 		  <td align="center" height="10"></td>
 		</tr>
 		<tr>
-		  <td align="center"><u><b>쪽지</b><u></td>
+		  <td align="center"><u><b>쪽지보기</b></u></td>
 		</tr>
 		<tr>
 		  <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

@@ -88,8 +88,7 @@ function reg(){
 											<option value="019">019</option>
 									</select>-<input type="text" name="tel" id="tel" size="4" /> -<input
 										type="text" name="tel" id="tel" size="4" /></td>
-									<td><img name="check" onclick="open()">
-									</td>
+									<td><img name="check" onclick="checkTel()"></td>
 								</tr>
 								<tr>
 									<td class="title"><label for="pwd"><img

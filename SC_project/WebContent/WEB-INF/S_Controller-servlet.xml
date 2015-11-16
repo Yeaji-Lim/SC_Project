@@ -15,6 +15,9 @@
     <!--회원가입 bean -->
     <bean id="reg" class="silver.web.member.control.RegControl" autowire="byName"/>
     
+    <!--회원정보 bean-->
+    <bean id="mypage" class="silver.web.member.control.MyPageMainControl" autowire="byName"/>
+    
     <!--문의사항 보여주는 bean-->
     <bean id="qblist" class="silver.web.board.control.QNAListControl" autowire="byName"/>
 		
@@ -123,27 +126,42 @@
 	<bean id="infodelComm" class="silver.web.board.control.InfodelCommControl"/>
 	
 	<!-- 쪽지 리스트 -->
-	<bean name="/msglist.sc" 
-	class="silver.web.message.control.Msg_list_Control">
-	<property name="dao" ref="mgdao"></property>
-	</bean>
+	<bean id="msg_list" class="silver.web.message.control.Msg_list_Control" autowire="byName"/>
 	<!-- 쪽지 보기 -->
-	<bean name="/msgview.sc" class="silver.web.message.control.Msg_ViewControl">
+	<bean name="/msg_view.sc" class="silver.web.message.control.Msg_ViewControl">
 		<property name="dao" ref="mgdao"></property>
 	</bean>
 	<!-- 쪽지쓰기 -->
 	<bean id="msg_write" class="silver.web.message.control.Msg_WriteControl" autowire="byName">
 	</bean>
 	<!-- 쪽지쓰기 폼 -->
-	<bean name="/msgwrite.sc"
+	<bean name="/msgWriteForm.sc"
 	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
 		<property name="viewName" 
-			value="msg_write"/>
+			value="/msg/msg_write"/>
 	</bean>
 	<!-- 쪽지삭제 -->
 	<bean name="/msg_del.sc" class="silver.web.message.control.Msg_DelControl" autowire="byName">
 		<property name="dao" ref="mgdao"></property>
 	</bean>
+	
+	
+	<!--매칭 게시판 쓰기 폼-->
+	<bean name="/mb_writeForm.sc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/matching/mbWrite"/>
+	</bean>
+	
+	<!--매칭 게시판 쓰기-->
+	<bean id="mbWrite" class="silver.web.matching.control.MatchWriteControl" autowire="byName"/>
+	
+	<!--매칭 게시판 보기-->
+	<bean id="mbView" class="silver.web.matching.control.MatchViewControl" autowire="byName"/>
+	
+	<!--매칭 게시판 리스트-->
+	<bean id="mbList" class="silver.web.matching.control.MatchListControl" autowire="byName"/>
+	
+	<!--매칭 게시판 수정-->
+	<bean id="mbEdit" class="silver.web.matching.control.MatchEditControl" autowire="byName"/>
 	
 	
 	

@@ -9,16 +9,43 @@
 }
 
 #board_navi{
+	position: relative;
 	float: left; /* 왼쪽부터 표시 */
-	height: 40px;
-	width: 100px;
+	height: 30px;
+	width: 80px;
+	margin-left: 25px;
+	padding-top: 10px;
+	border: 3px solid orange;
 	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
 	font-weight: 50;
-	font-size: 20px;
+	font-size: 25px;
 	text-align: center;
-	background-color: pink;
-	margin-left: 25px;
 }
+
+#p_nav{
+	z-index:100;
+	position:absolute;
+	top:250px;
+	left:0;
+	width:200px;
+	height:519px;
+	padding-left: 40px;
+}
+
+#mypage_navi{
+	position: relative;
+	float: left; /* 왼쪽부터 표시 */
+	height: 30px;
+	width: 100px;
+	margin-left: 20px;
+	padding-top: 10px;
+	border: 3px solid orange;
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-weight: 50;
+	font-size: 25px;
+	text-align: center;
+}
+
 
 .navi_ul{
 	width: 150px;
