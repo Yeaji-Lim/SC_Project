@@ -6,53 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
+<link rel="stylesheet" href="css/login.css" type="text/css" />
 
-<style>
-div#wrap div {
-	float: left;
-}
 
-#login {
-	position: absolute;
-	top: 300px;
-	left: 1200px;
-	width: 150px;
-	height: 100px;
-	text-align: right;
-}
-
-input {
-	border: 1px solid black;
-	background-color: #dedede;
-}
-
-.title {
-	text-align: right;
-}
-
-div#reg {
-	display: none;
-}
-
-input#id, input#pwd, input#repwd {
-	width: 53px;
-}
-
-div#reg {
-	position: absolute;
-	top: 100px;
-	left: 300px;
-	width: 450px;
-	height: 350px;
-	background-color: #ffffff;
-	border-radius: 10px;
-	border: 1px solid black;
-	padding: 10px;
-	padding-top: 30px;
-	text-align: left;
-	display: none;
-}
-</style>
 
 <script type="text/javascript">
 			

@@ -20,7 +20,9 @@
 <link href="text.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
-	#frList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+	
+	#frList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px; }
+	
 </style>
 </head>
 <jsp:include page="../header.jsp"></jsp:include>
@@ -37,7 +39,7 @@
 		  <td align="center" height="10"></td>
 		</tr>
 		<tr>
-		  <td align="center"><u><b>BBS 목록</b><u></td>
+		  <td align="center"><b>자유게시판</b></td>
 		</tr>
 		<tr>
 		  <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

@@ -51,7 +51,7 @@
 		  <td align="center" height="10"></td>
 		</tr>
 		<tr>
-		  <td align="center"><u><b>BBS 목록</b><u></td>
+		  <td align="center"><b>정보게시판</b></td>
 		</tr>
 		<tr>
 		  <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
