@@ -9,6 +9,11 @@ function openReg(){
 	
 	open('reg.sc','','left=50, top=50, width=420, height=410, scrollbars=0');
 }
+
+function openMsg() {
+	open('msg_list.sc','','left=50, top=50, width=600, height=300, scrollbars=0');
+}
+
 </script>
 
 
@@ -20,6 +25,7 @@ function openReg(){
 				if (login != null) {
 			%>
 			<li class="top_link_li01"><a href="mypage.sc">마이페이지</a></li>
+			<li class="top_link_li01"><a href="javascript:openMsg()">내 쪽지</a></li>
 			<li class="top_link_li01"><a href="logout.jsp">로그아웃</a></li>
 			<%
 				} else {

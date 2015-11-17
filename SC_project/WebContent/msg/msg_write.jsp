@@ -10,7 +10,6 @@
 <script type="text/javascript">
 	function check(ff){
 		//유효성 검사
-		
 		ff.submit();
 	}
 </script>

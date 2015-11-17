@@ -54,7 +54,7 @@ public class Msg_WriteControl {
 		ModelAndView mv = new ModelAndView();
 		
 		//Redirect로 list.inc를 호출
-		mv.setViewName("redirect:/msg_list.sc");
+		mv.setViewName("/msg/msg_close");
 		
 		return mv;
 	}

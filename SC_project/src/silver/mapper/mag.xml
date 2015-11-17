@@ -8,7 +8,7 @@
 	 전체게시물의 수를 반환 -->
 	<select id="msg_totalCount" resultType="int"
 	 parameterType="String">
-		SELECT COUNT(*) FROM msg_t where status=0 and request_tel like #{request_tel}
+		SELECT COUNT(*) FROM msg_t where status=0 and send_tel like #{send_tel}
 	</select>
 	 
 	<!-- 페이징 기법을 활용한 select -->
@@ -17,7 +17,7 @@
 	parameterType="java.util.Map">
 		SELECT * FROM (
 			SELECT rownum as r_num, a.* FROM (
-				SELECT * FROM msg_t where status = 0 and request_tel like #{request_tel}
+				SELECT * FROM msg_t where status = 0 and send_tel like #{send_tel}
 				) a
 		) WHERE r_num BETWEEN #{begin} AND #{end}
 	

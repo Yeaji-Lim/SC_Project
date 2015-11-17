@@ -69,7 +69,7 @@ public class Msg_list_Control{
 			//dao를 통해 표현할 목록을 가져오기 위해 map구조를 생성
 			Map<String, String> map = 
 					new HashMap<>();
-			map.put("request_tel", tel);
+			map.put("send_tel", tel);
 			map.put("begin", String.valueOf(begin));
 			map.put("end", String.valueOf(end));
 

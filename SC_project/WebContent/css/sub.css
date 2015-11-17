@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+/*   마이페이지   ================================================================================== */
+
+.mypage_message_title {
+	color: #fff;
+	border-top: 2px solid #4fb23b;
+	background-color: #484f62;
+	padding: 0px 0px;
+	height: 50px;
+}
+
+.mypage_message_img {
+	border: 1px solid #cccccc;
+	width: 32px;
+	height: 32px;
+	margin: 8px 15px;
+}
+
+.mypage_message_txt_fl {
+	margin: 0 0 0 65px;
+}
+
+.mypage_message_txt_fr {
+	float: right;
+	text-align: right;
+}
+
+.mypage_message_txt01 {
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 7px 0 0px 0;
+}
+
+.mypage_message_txt02 {
+	font-size: 11px;
+	color: #868b98;
+	padding: 0px 0 0px 0;
+}
+
+.mypage_message2_title {
+	color: #fff;
+	border-top: 2px solid #4fb23b;
+	background-color: #484f62;
+	padding: 0px 0px;
+	height: 80px;
+}
+
+.mypage_message2_img {
+	border: 1px solid #cccccc;
+	width: 65px;
+	height: 65px;
+	margin: 8px 15px;
+}
+
+.mypage_message2_txt_fl {
+	margin: 0 0 0 85px;
+	width: 200px;
+}
+
+.mypage_message2_txt_fr {
+	float: right;
+	text-align: right;
+}
+
+.mypage_message2_txt01 {
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 7px 0 0px 0;
+}
+
+.mypage_message2_txt02 {
+	font-size: 11px;
+	color: #868b98;
+	padding: 0px 0 0px 0;
+}
+
+.mypage_message_box {
+	height: 300px;
+	padding: 20px 30px;
+	border-left: 2px solid #cccccc;
+	border-right: 2px solid #cccccc;
+	border-bottom: 2px solid #cccccc;
+	background-color: #fafafa;
+}
+
+.mypage_message_bg01 {
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.mypage_message_bg01_img {
+	float: left;
+	border: 1px solid #ccc;
+}
+
+.mypage_message_bg01_name {
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+	padding: 0px 0 3px 0;
+}
+
+.mypage_message_bg01_1 {
+	background: url("../image/mypage/bg/massage_bg1_1.gif") no-repeat;
+	padding: 5px 5px 5px 25px;
+}
+
+.mypage_message_bg01_2 {
+	background: url("../image/mypage/bg/massage_bg1_2.gif") no-repeat left
+		bottom;
+}
+
+.mypage_message_bg01_3 {
+	background: url("../image/mypage/bg/massage_bg1_3.gif") no-repeat right
+		top;
+}
+
+.mypage_message_bg01_4 {
+	background: url("../image/mypage/bg/massage_bg1_4.gif") no-repeat right
+		bottom;
+	width: 400px;
+}
+
+.mypage_message_bg02 {
+	float: right;
+	margin: 0 0 0 10px;
+}
+
+.mypage_message_bg02_img {
+	float: right;
+	border: 1px solid #ccc;
+}
+
+.mypage_message_bg02_name {
+	text-align: right;
+	font-size: 11px;
+	color: #333;
+	font-weight: bold;
+	padding: 0px 0px 3px 0;
+}
+
+.mypage_message_bg02_1 {
+	background: url("../image/mypage/bg/massage_bg2_1.gif") no-repeat right
+		top;
+	padding: 5px 25px 5px 5px;
+	text-align: right
+}
+
+.mypage_message_bg02_2 {
+	background: url("../image/mypage/bg/massage_bg2_2.gif") no-repeat right
+		bottom;
+}
+
+.mypage_message_bg02_3 {
+	background: url("../image/mypage/bg/massage_bg2_3.gif") no-repeat left
+		top;
+}
+
+.mypage_message_bg02_4 {
+	background: url("../image/mypage/bg/massage_bg2_4.gif") no-repeat left
+		bottom;
+	width: 400px;
+}
+
+.mypage_message_write_box {
+	background-color: #efefef;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+.mypage_message_write_input {
+	float: left;
+	border: 1px solid #bbb;
+	width: 630px;
+	height: 38px;
+}
+
+
+.mypage_info_wrap {
+	margin-top: 250px; 
+	width: 900px; 
+	margin-left:300px;
+	background-color: white;
+}
+
+.mypage_info_point {
+	background: url(/SWS/image/point/pointWindow.jpg);
+	height: 99px;
+	border: 1px solid #ee5a02;
+}
+
+.mypage_info_point0 {
+	padding-top: 30px;
+}
+
+.mypage_info_title {
+	color: black;
+	border-bottom: 1px solid #2e3443;
+	padding: 20px 0 17px 23px;
+}
+
+.mypage_info_title_bf {
+	font-size: 25px;
+	font-family: '맑은 고딕', NanumGothic, '나눔고딕';
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.mypage_info_title_color {
+	color: black;
+}
+
+.mypage_info_profile {
+	border-top: 1px solid #4b5163;
+	padding: 20px 23px;
+	min-height: 90px;
+}
+
+.mypage_info_profile_img {
+	float: left;
+}
+
+.mypage_info_profile_img img {
+	width: 85px;
+}
+
+.mypage_info_profile_txt {
+	margin: 0 0 0 110px;
+}
+
+.mypage_info_profile_txt01 {
+	color: black;
+	padding: 1px 0 2px 10px;
+	background: url("/SWS/image/mypage/icon04.jpg") no-repeat 2px 8px;
+}
+
+.mypage_team_box01 {
+	border: 7px solid #cdd0d7;
+	padding: 15px 20px;
+}
+
+.mypage_team_img {
+	float: left;
+}
+
+.mypage_team_img img {
+	width: 125px;
+}
+
+.mypage_team_info {
+	margin: 0 0 0 150px;
+}
+
+.mypage_team_info_txt01 {
+	padding: 1px 0 2px 10px;
+	background: url("../image/common/icon05.gif") no-repeat 2px 8px;
+}
+
+.mypage_team_info_name {
+	color: #f86300;
+	font-weight: bold;
+	font-size: 16px;
+	font-family: '맑은 고딕', NanumGothic, '나눔고딕';
+	padding: 0 0 17px 0;
+}

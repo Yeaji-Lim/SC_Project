@@ -42,7 +42,7 @@
 					  <td height="20" align="center" bgcolor="#669AB3" width="80"><font color="#FFFFFF">보낸이</font></td>
 					  <td height="20" align="center" bgcolor="#669AB3" width="100"><font color="#FFFFFF">날짜</font></td>
 					</tr>
-       <c:forEach var="vo" items="${list }" varStatus="stat">
+       				<c:forEach var="vo" items="${list }" varStatus="stat">
 					<tr>
 					  <td bgcolor="#F2F7F9">
 <!--                           <s:property value="rowTotal-((nowPage-1)*blockList+#stat.index)"/> -->
@@ -50,11 +50,11 @@
                       </td>
 					  <td bgcolor="#F2F7F9" style="text-align:left">
 					  	
-					 	<a href="msgview.sc?b_idx=${vo.b_idx }&nowPage=${nowPage}"> 
+					 	<a href="msg_view.sc?b_idx=${vo.b_idx }&nowPage=${nowPage}"> 
 							${vo.subject }
 						</a>
                       </td>
-					  <td bgcolor="#F2F7F9">${vo.send_tel}</td>
+					  <td bgcolor="#F2F7F9">${vo.request_tel}</td>
 					  <td bgcolor="#F2F7F9">${vo.write_date }</td>
 					</tr>
        </c:forEach>

@@ -35,7 +35,7 @@ public class Msg_DelControl implements Controller  {
 		//vo.setSendtel(tel);
 		ModelAndView mv = new ModelAndView();
 		dao.delBbs(vo);
-		mv.setViewName("redirect:/msglist.sc");
+		mv.setViewName("redirect:/msg_list.sc");
 		
 		return mv;
 	}

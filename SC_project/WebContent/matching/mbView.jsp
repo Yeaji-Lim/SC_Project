@@ -25,7 +25,7 @@
 		alert("아이디가 다릅니다");
 	}
 	
-	function openMsg(){
+	function msg_open(){
 		open('msgWriteForm.sc','','left=50, top=50, width=600, height=300, scrollbars=0');
 	}
 	
@@ -91,7 +91,7 @@
 		  
 		  <tr>
 		  	<td colspan="3" align="left">
-		  		<input type="button" value="매칭하기" onclick="openMsg()" style="cursor:pointer">
+		  		<input type="button" value="매칭하기" onclick="msg_open()" style="cursor:pointer">
 		  		
 		  	</td>
 		  </tr>

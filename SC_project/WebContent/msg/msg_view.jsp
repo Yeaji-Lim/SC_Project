@@ -1,18 +1,17 @@
-<%-- 
-    Document   : view
-    Created on : 2009. 4. 3, 오후 12:21:38
-    Author     : hb00
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
-
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <link href="text.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	function del_ok(b_idx) {
+		alert("쪽지를 삭제하시겠습니까?");
+		//location.href="msg_del.sc?b_idx="+b_idx;
+	}
+
 </script>
 </head>
 <body>
@@ -61,8 +60,8 @@
 					&nbsp;
 				  </td>
 				  <td width="241" align="right">
-					<img src="img/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='msg_list.sc?nowPage=${nowPage}'" style="cursor:pointer">
-					<img src="img/button/but_undel.gif" width="56" height="21" onClick="javaScript:location.href='msg_del.sc?b_idx=${b_idx}'" }>
+					<img src="images/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='msg_list.sc?nowPage=${nowPage}'" style="cursor:pointer"/>
+					<img src="images/button/but_del.gif" width="56" height="21" onClick="del_ok(${b_idx})"/>
 					
 					</td>
 				</tr>
