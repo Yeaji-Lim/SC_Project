@@ -4,9 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
-
 import silver.web.board.vo.NoticeBoardVO;
-
 
 public class NoticeBoardDAO {
 	
@@ -34,6 +32,7 @@ public class NoticeBoardDAO {
 		}
 		return ar;
 	}
+	
 	//공지사항 글저장
 	public boolean writeBbs(NoticeBoardVO vo){
 		int cnt = template.insert("noti.notice_write",vo);

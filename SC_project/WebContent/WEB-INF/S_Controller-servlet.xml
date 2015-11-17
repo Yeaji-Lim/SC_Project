@@ -9,6 +9,9 @@
     
    <context:annotation-config/>
     
+    <!--메인페이지 bean-->
+    <bean id="main" class="silver.web.main.control.MainControl" autowire="byName"/>
+    
     <!--로그인 bean-->
     <bean id="login" class="silver.web.member.control.LoginControl" autowire="byName"/>
     

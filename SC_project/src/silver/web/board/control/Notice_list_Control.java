@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
@@ -26,12 +27,12 @@ public class Notice_list_Control implements Controller{
 		int rowTotal; //총 게시물의 수
 		String pageCode; //페이징 처리된 HTML코드
 
-
-		
 		public void setNtdao(NoticeBoardDAO ntdao) {
 			this.ntdao = ntdao;
 		}
 
+		HttpSession session;
+		
 		@Override
 		public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 			
@@ -69,6 +70,7 @@ public class Notice_list_Control implements Controller{
 			mv.addObject("pageCode",pageCode);
 			mv.addObject("rowTotal",rowTotal);
 			mv.addObject("blockList",Block_LIST);
+			//session.setAttribute("list", ar);
 			
 			mv.setViewName("/board/list_notice");
 			

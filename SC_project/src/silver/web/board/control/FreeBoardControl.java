@@ -28,8 +28,7 @@ public class FreeBoardControl {
 		int nowPage;//현재 페이지 값
 		int rowTotal;//총 게시물의 수
 		String pageCode;// 페이징 처리된 HTML코드
-		
-		
+
 	@RequestMapping("/freelist")
 	public ModelAndView list(FreeBoardVO vo)throws Exception{
 		
