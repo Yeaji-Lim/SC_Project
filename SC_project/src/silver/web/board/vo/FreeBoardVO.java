@@ -3,7 +3,7 @@ package silver.web.board.vo;
 import java.util.List;
 
 public class FreeBoardVO {
-	private String fb_num,fb_subject,fb_content,fb_writertel,fb_regdate,fb_pwd;
+	private String fb_num,fb_subject,fb_content,fb_writertel,fb_regdate;
 	private int status,fb_readcount;
 	private List<FreeRepyVO> f_list;
 	public String getFb_num() {
@@ -36,12 +36,7 @@ public class FreeBoardVO {
 	public void setFb_regdate(String fb_regdate) {
 		this.fb_regdate = fb_regdate;
 	}
-	public String getFb_pwd() {
-		return fb_pwd;
-	}
-	public void setFb_pwd(String fb_pwd) {
-		this.fb_pwd = fb_pwd;
-	}
+
 	public int getStatus() {
 		return status;
 	}

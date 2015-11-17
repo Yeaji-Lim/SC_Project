@@ -6,7 +6,8 @@
 <%@page import="silver.web.board.vo.NoticeBoardVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,6 +15,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <link rel="stylesheet" href="css/login.css" type="text/css" />
+<link rel="stylesheet" href="css/main.css" type="text/css" />
 
 <script type="text/javascript">
 	//회원 가입 폼을 보여주는 함수
@@ -81,33 +83,61 @@
 
 	<jsp:include page="login.jsp"></jsp:include>
 
-
-	<!--게시판들 보기 시작-->	
+	<%
+		request.setCharacterEncoding("utf-8");
+	%>
+	<!--게시판들 보기 시작-->
+	<div class="main_small_board">
+	<div class="free_small">
+		<p class="freetitle"><a>자유게시판</a></p>
+		<c:forEach var="vo" items="${list1 }" varStatus="stat">
+			<div class="freebox">
+			<div class="left">
+				<a href="#" class="news_a">${vo.fb_subject }<span style="font-size: 8pt;"></span></a>
+			</div>
 			
-				<div class="la_news_list">
-				${list.length }
-					<c:forEach var="vo" items="${list }" varStatus="stat">
-
+			<%-- <fmt:parseDate value="${vo.fb_regdate}" var="dateFmt" pattern="yyyyMMddHHmmss"/>
+      		<fmt:formatDate value="${dateFmt}"  pattern="yyyy-MM-dd"/> --%>
 			
-						<div>${vo.fb_num }</div>
-						<div class="left">
-							<a href="#" class="news_a">${vo.fb_subject }<span style="font-size: 8pt;"></span></a>
-						</div>
-						<div class="right">${vo.fb_regdate }</div>
-					
-					</c:forEach>
-				</div>
+			<div class="right">${vo.fb_regdate}</div>
+			</div>
+			
+		</c:forEach>
+	</div>
+	</div>
 
+	<div class="main_small_board">
+	<div class="match_small">
+		<p class="matchtitle"><a>요양사를 소개합니다</a></p>
+		<c:forEach var="vo" items="${list2 }" varStatus="stat">
+			<div class="matchbox">
+			<div class="left">
+				<a href="#" class="news_a">${vo.mb_subject }<span
+					style="font-size: 8pt;"></span></a>
+			</div>
+			<div class="right">${vo.mb_regdate }</div>
+			</div>
+		</c:forEach>
+	</div>
+	</div>
 
-		
-	
-		
-
-		
-		
-
-
+	<div class="main_small_board">
+	<div class="notice_small">
+	<p class="noticetitle"><a>공지사항</a></p>
+		<c:forEach var="vo" items="${list3 }" varStatus="stat">
+			<div class="noticebox">
+			<div class="left">
+				<a href="#" class="news_a">${vo.subject }<span
+					style="font-size: 8pt;"></span></a>
+			</div>
+			<div class="right">${vo.write_date }</div>
+			</div>
+		</c:forEach>
+	</div>
+	</div>
 	<!--게시판들 보기 끝  -->
+
+	
 
 
 

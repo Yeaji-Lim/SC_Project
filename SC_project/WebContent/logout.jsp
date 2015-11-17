@@ -9,7 +9,7 @@
 	session.removeAttribute("login_ok");
 
 	// 페이지 이동
-	response.sendRedirect("/SC_project/main.jsp");
+	response.sendRedirect("main.sc");
 %>
 
 

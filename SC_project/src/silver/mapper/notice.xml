@@ -22,6 +22,12 @@
 	
 	</select>
 	
+	<!--메인에 띄울 리스트-->
+	<select id="mainList" resultType="silver.web.board.vo.NoticeBoardVO">
+		select * from silver_notice
+		order by write_date asc 
+	</select>
+	
 	<!--공지사항 쓰기 -->
   <insert id="notice_write" 
 	parameterType="silver.web.board.vo.NoticeBoardVO">

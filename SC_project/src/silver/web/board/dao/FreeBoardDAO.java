@@ -40,6 +40,20 @@ public class FreeBoardDAO {
 		return ar;
 	}
 	
+	public FreeBoardVO[] getMainList(){
+		List<FreeBoardVO> list =
+			template.selectList("free.mainList");
+		
+		//받은 list구조를 다시 배열로 변환
+		FreeBoardVO[] ar = null;
+		if(list != null && list.size() > 0){
+			ar = new FreeBoardVO[list.size()];
+			//list의 요소들을 배열에 복사해 넣는다.
+			list.toArray(ar);
+		}
+		return ar;
+	}
+	
 	//원글을 저장하는 기능
 	public boolean writeBbs(FreeBoardVO vo){
 		int cnt = template.insert(

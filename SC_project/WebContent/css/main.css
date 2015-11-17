@@ -1,0 +1,118 @@
+
+.main_small_board{
+	float:left;
+	width: 300px;
+	height: 400px;
+	border: 2px solid black;
+	margin-left: 80px;
+	margin-top: 300px;
+} 
+
+.free_small{
+	
+	top: 400px; 
+	left: 300px;
+	
+}
+
+.freebox{
+	width: 300px;
+	float: left;
+	margin-bottom: 15px;
+	border-bottom: 1px dashed black;
+}
+
+.matchbox{
+	width: 300px;
+	float: left;
+	margin-bottom: 15px;
+	border-bottom: 1px dashed black;
+}
+
+.noticebox{
+	width: 300px;
+	float: left;
+	margin-bottom: 15px;
+	border-bottom: 1px dashed black;
+}
+
+.match_small{
+	
+	top: 400px; 
+	left: 300px;
+	
+}
+
+.notice_small{
+	
+	top: 400px; 
+	left: 300px;
+	
+}
+
+.freetitle{
+	border: 1px solid red;
+	background-color: pink;
+	text-align: center;
+}
+
+.freetitle a{
+	
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-size: 20px;
+	
+}
+
+
+.matchtitle{
+	border: 1px solid red;
+	background-color: pink;
+	text-align: center;
+}
+
+.matchtitle a{
+	
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-size: 20px;
+	
+}
+
+
+
+.noticetitle{
+	border: 1px solid red;
+	background-color: pink;
+	text-align: center;
+}
+
+.noticetitle a{
+	
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-size: 20px;
+	
+}
+
+
+
+
+.left{
+	float: left;
+	width: 100px;
+	margin-left: 10px;
+}
+
+.left a{
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-size: 15px;
+}
+
+.right{
+	float: right;
+	width: 100px;
+	margin-right: 10px;	
+}
+
+.right{
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	font-size: 15px;
+}

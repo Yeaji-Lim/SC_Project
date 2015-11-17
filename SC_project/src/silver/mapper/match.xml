@@ -22,7 +22,11 @@
 		) WHERE r_num BETWEEN #{begin} AND #{end}
 	</select>
 	
-	
+	<!--메인에 띄울 리스트-->
+	<select id="mainList" resultType="silver.web.matching.vo.MatchingVO">
+		select * from matchboard
+		order by mb_regdate asc
+	</select>
 	
 	<!--매칭 게시판 insert-->
   <insert id="mb_write" parameterType="silver.web.matching.vo.MatchingVO">

@@ -33,6 +33,20 @@ public class NoticeBoardDAO {
 		return ar;
 	}
 	
+	public NoticeBoardVO[] getMainList(){
+		List<NoticeBoardVO> list = template.selectList("noti.mainList");
+		
+		// 받은 list 구조를 다시 배열로 변환 
+		NoticeBoardVO[] ar = null;
+		if(list != null && list.size()>0){
+			ar= new NoticeBoardVO[list.size()];
+			//list의 요소들을 배열에 복사해 넣는다. 
+			list.toArray(ar);
+		}
+		return ar;
+	}
+	
+	
 	//공지사항 글저장
 	public boolean writeBbs(NoticeBoardVO vo){
 		int cnt = template.insert("noti.notice_write",vo);

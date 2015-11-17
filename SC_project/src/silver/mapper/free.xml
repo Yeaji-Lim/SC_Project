@@ -26,13 +26,18 @@
 	
 	</select>
 	
+	<!--메인에 띄울 리스트 -->
+	<select id="mainList" resultType="silver.web.board.vo.FreeBoardVO">
+	select * from freeboard
+	order by fb_regdate asc
+	
+	</select>
+	
 	<!-- 원글을 저장하는 insert -->
 	<insert id="write" 
 	parameterType="silver.web.board.vo.FreeBoardVO">
-		INSERT INTO freeboard(fb_num, fb_subject, fb_content,
-		 fb_writertel, fb_regdate, fb_pwd, status,fb_readcount)
-		VALUES(freeboaed_seq.NEXTVAL,#{fb_subject},
-		 #{fb_content},#{fb_writertel},sysdate,#{fb_pwd},0,0)
+		INSERT INTO freeboard(fb_num, fb_subject, fb_content,fb_writertel, fb_regdate, status,fb_readcount)
+		VALUES(FREEBOAED_SEQ.NEXTVAL,#{fb_subject},#{fb_content},#{fb_writertel},SYSDATE,0,0)
 	</insert>
 	<!-- 조회수 증가 -->
 	

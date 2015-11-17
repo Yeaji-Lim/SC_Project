@@ -1,9 +1,6 @@
 package silver.web.board.control;
 
-
-
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,30 +17,13 @@ import silver.web.board.vo.FreeBoardVO;
 public class FreeBoardWControl {
 	@Autowired
 	FreeBoardDAO frdao;
-	
-	@Autowired
-	HttpServletRequest request;
-	
-	@Autowired
-	ServletContext servletContext;
-	//위는 아래의 첨부파일이 저장될 폴더명을
-	//절대경로로 만들기 위해 필요하다.
-	
 
+	@Autowired
+	HttpSession session;	
 	
-	
-	@RequestMapping(value="freewrite.sc",method=RequestMethod.POST)
+	@RequestMapping(value="freewrite.sc", method=RequestMethod.POST)
 	public ModelAndView write(FreeBoardVO vo)throws Exception{
-		//현재 영역은 POST방식으로 write.inc로
-		//요청될 때 수행되는 영역이다.
-		//인자인 BbsVO가 자동으로 생성되어
-		//파라미터들일 BbsVO에 있는 변수 명들과
-		//동일한 곳에 찾아 저장된다.
-	
 		
-		System.out.println(vo.getFb_content());
-		
-		//
 		frdao.writeBbs(vo);
 		
 		//반환객체 생성

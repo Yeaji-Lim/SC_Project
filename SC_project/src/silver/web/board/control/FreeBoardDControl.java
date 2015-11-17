@@ -26,7 +26,7 @@ public class FreeBoardDControl {
 		nowPage=request.getParameter("nowPage");
 
 
-		frdao.del(vo.getFb_num(), vo.getFb_pwd());
+		//frdao.del(vo.getFb_num(), vo.getFb_pwd());
 
 
 		ModelAndView mv= new ModelAndView();

@@ -30,6 +30,19 @@ public class MatchingDAO {
 		return ar;
 	}
 	
+	public MatchingVO[] getMainList(){
+		List<MatchingVO> list = template.selectList("match.mainList");
+		
+		// 받은 list 구조를 다시 배열로 변환 
+		MatchingVO[] ar = null;
+		if(list != null && list.size()>0){
+			ar= new MatchingVO[list.size()];
+			//list의 요소들을 배열에 복사해 넣는다. 
+			list.toArray(ar);
+		}
+		return ar;
+	}
+	
 	public boolean mbWrite(MatchingVO vo){
 		int cnt = template.insert("match.mb_write",vo);
 		if(cnt >0 ){

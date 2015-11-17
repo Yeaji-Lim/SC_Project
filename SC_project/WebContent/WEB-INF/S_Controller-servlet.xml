@@ -69,11 +69,14 @@
 	<bean name="/notice_del.sc" class="silver.web.board.control.Notice_DelControl" autowire="byName">
 		<property name="dao" ref="ntdao"></property>
 	</bean>
+	
 	<!--자유게시판 쓰기-->
-	<bean id="freewrite" class="silver.web.board.control.FreeBoardWControl"/>
 	<bean name="/freewriteform.sc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
 	<property name="viewName" value="/board/freewrite"></property>
 	</bean>
+	
+	<bean id="freewrite" class="silver.web.board.control.FreeBoardWControl"/>
+	
 	<!--자유게시판 보기-->
 	<bean id="freeview" class="silver.web.board.control.FreeBoardVControl"/>
 	<!--자유게시판 수정-->
