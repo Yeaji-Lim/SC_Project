@@ -31,11 +31,11 @@ public class DelUserControl{
 		LoginVO dvo = (LoginVO)session.getAttribute("login_ok");
 		tel = dvo.getTel();
 		vo.setTel(tel);
-		System.out.println(vo.getTel());
+		//System.out.println(vo.getTel());
 		dao.delBbs(vo);
 		ModelAndView mv = new ModelAndView();
 		session.removeAttribute("login_ok");
-		mv.setViewName("/main.sc");
+		mv.setViewName("redirect:/main.sc");
 		return mv;
 	}
 }
