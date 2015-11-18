@@ -130,7 +130,7 @@ function cc(){
 				  <td align="left">
 					&nbsp;
 				  </td>
-				 
+				 	<td>
 					<img src="images/button/but_modify.gif" width="56" height="21" onClick="javascript:location.href='freeedit.sc?fb_num=${fb_num}&nowPage=${nowPage }'" style="cursor:pointer">
 					<img src="images/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='freelist.sc?nowPage=${nowPage}'" style="cursor:pointer">
 

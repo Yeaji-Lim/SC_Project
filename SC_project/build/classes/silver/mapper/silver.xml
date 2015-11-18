@@ -21,13 +21,21 @@
   	1, sysdate, #{pwd}, SEQ_SILVER_IDX.NEXTVAL, #{nickname})
   </insert>
   
+  <!-- 회원정보 보기 -->
+	<select id ="getuser" resultType="silver.web.member.vo.LoginVO"
+	parameterType="String">
+	select * from silver_t
+	where tel = #{tel}
+	</select>
+  
+  
    <!-- 회원 수정 update -->
    <update id="edit" parameterType="silver.web.member.vo.LoginVO">
    	UPDATE silver_t
 		set addr= #{addr}
 			,nickname= #{nickname}
 			,pwd= #{pwd}
-			where tel = #{tel}
+	where tel = #{tel}
    </update>
    
    <!-- 회원삭제 update -->

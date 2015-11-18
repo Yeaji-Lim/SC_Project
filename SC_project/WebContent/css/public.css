@@ -3,7 +3,7 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	/* height: 1000px; */
+	height: 1000px;
 }
 
 #header {
@@ -45,6 +45,7 @@ html, body {
 	font-size: 15px;
 	color: black;
 	letter-spacing: -1px;
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
 }
 
 /*  ▼ 탑메뉴  (히든레이어) ===================================*/
@@ -94,7 +95,7 @@ html, body {
 	line-height: 30px;
 	font-weight: bold;
 	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
-	background-color: #edffa4! important;
+	background-color: #feffc1! important;
 }
 
 
@@ -109,9 +110,6 @@ html, body {
 	color:#222;
 	text-decoration: none;
 }
-
-
-
 
 
 /* 탑 메뉴 네비게이션 */
@@ -154,6 +152,15 @@ html, body {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 50px;
-	background: #3dbeb8;
+	height: 30px;
+	background: #feffc1;
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+}
+
+tr{
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+}
+
+td{
+	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
 }
