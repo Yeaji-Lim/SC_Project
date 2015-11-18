@@ -12,6 +12,7 @@
 
 <html>
 <head>
+<title>은빛마을</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 	#notiView{

@@ -6,7 +6,7 @@
 <head>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>은빛마을</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 #infoEdit{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}

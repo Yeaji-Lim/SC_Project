@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
 
-
+<title>은빛마을</title>
 
 	<div id="container">
 		<div id="wrap">

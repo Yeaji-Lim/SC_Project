@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>은빛마을</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <link rel="stylesheet" href="css/login.css" type="text/css" />
 <link rel="stylesheet" href="css/main.css" type="text/css" />
@@ -93,7 +93,7 @@
 		<c:forEach var="vo" items="${list1 }" varStatus="stat">
 			<div class="freebox">
 			<div class="left">
-				<a href="freeview.sc?fb_num=${vo.fb_num }" class="news_a">${vo.fb_subject }<span style="font-size: 8pt;"></span></a>
+				<a href="freeview.sc?fb_num=${vo.fb_num }&nowPage=1" class="news_a">${vo.fb_subject }<span style="font-size: 8pt;"></span></a>
 			</div>
 			
 			<%-- <fmt:parseDate value="${vo.fb_regdate}" var="dateFmt" pattern="yyyyMMddHHmmss"/>
@@ -112,7 +112,7 @@
 		<c:forEach var="vo" items="${list2 }" varStatus="stat">
 			<div class="matchbox">
 			<div class="left">
-				<a href="mb_view.sc?mb_num=${vo.mb_num }" class="news_a">${vo.mb_subject }<span
+				<a href="mb_view.sc?mb_num=${vo.mb_num }&nowPage=1" class="news_a">${vo.mb_subject }<span
 					style="font-size: 8pt;"></span></a>
 			</div>
 			<div class="right">${vo.mb_regdate }</div>
@@ -127,7 +127,7 @@
 		<c:forEach var="vo" items="${list3 }" varStatus="stat">
 			<div class="noticebox">
 			<div class="left">
-				<a href="notice_view.sc?seq=${vo.b_idx }" class="news_a">${vo.subject }<span
+				<a href="notice_view.sc?seq=${vo.b_idx }&nowPage=1" class="news_a">${vo.subject }<span
 					style="font-size: 8pt;"></span></a>
 			</div>
 			<div class="right">${vo.write_date }</div>

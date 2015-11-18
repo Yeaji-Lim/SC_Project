@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>자유게시판 글쓰기</title>
+<title>은빛마을</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">
 function check(ff){

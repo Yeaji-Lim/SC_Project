@@ -13,7 +13,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
-
+<title>은빛마을</title>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <% BbsVO vo = (BbsVO)request.getAttribute("vo");
@@ -113,6 +113,7 @@
 					&nbsp;
 				  </td>
 				  
+				  <td width="241" align="right">
 				  <%if(login == null){
 				%>	  <img src="images/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='info.sc?nowPage=${nowPage }'" style="cursor:pointer"/>
 				  <% }
@@ -121,7 +122,7 @@
 				  
 				  <%if(login != null){ %>
 				  
-				  <td width="241" align="right"><img src="images/button/but_answer.gif" width="56" height="21" onClick="JavaScript:location.href='answer.sc?seq=${seq}&groups=${vo.groups }&step=${vo.step }&lev=${vo.lev }&nowPage=${nowPage }'" style="cursor:pointer">
+				  <img src="images/button/but_answer.gif" width="56" height="21" onClick="JavaScript:location.href='answer.sc?seq=${seq}&groups=${vo.groups }&step=${vo.step }&lev=${vo.lev }&nowPage=${nowPage }'" style="cursor:pointer">
 					
 					<%if(login.getName().equals(vo.getWriter())){%>
 					<img src="images/button/but_modify.gif" width="56"

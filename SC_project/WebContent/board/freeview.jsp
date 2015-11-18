@@ -4,12 +4,15 @@
     Author     : hb00
 --%>
 
+<%@page import="silver.web.board.vo.FreeBoardVO"%>
+<%@page import="silver.web.member.vo.LoginVO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
 <head>
+<title>은빛마을</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
 	div#del_win{
@@ -73,11 +76,16 @@ function cc(){
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <link href="text.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <jsp:include page="../header.jsp"></jsp:include>
 <jsp:include page="../board_navi.jsp"></jsp:include>
+<%
+LoginVO login = (LoginVO)session.getAttribute("login_ok");
 
+FreeBoardVO free = (FreeBoardVO)session.getAttribute("free");
+%>
 <body>
 <table width="556" border="0" cellspacing="0" cellpadding="0" align="center" id="frView">
 		  <tr>
@@ -130,11 +138,17 @@ function cc(){
 				  <td align="left">
 					&nbsp;
 				  </td>
-				 	<td>
+				  
+				  <td width="241" align="right">
+				  <%if(login == null){ %>
+				  <img src="images/button/but_list.gif" width="56" height="21" onClick="javaScript:location.href='freelist.sc?nowPage=${nowPage}'" style="cursor:pointer">
+				  <%} %>
+				  <%if(login != null && login.getName().equals(free.getFb_writertel())){ %>
 					<img src="images/button/but_modify.gif" width="56" height="21" onClick="javascript:location.href='freeedit.sc?fb_num=${fb_num}&nowPage=${nowPage }'" style="cursor:pointer">
 					<img src="images/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='freelist.sc?nowPage=${nowPage}'" style="cursor:pointer">
 
 					<img src="images/button/but_del.gif" width="56" height="21" onclick="openDel()"/>
+				<%} %>
 					</td>
 				</tr>
 			  </table></td>

@@ -21,7 +21,7 @@
 
 <html>
 <head>
-
+<title>은빛마을</title>
 <link href="text.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">

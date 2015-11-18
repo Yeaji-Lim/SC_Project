@@ -5,6 +5,7 @@
 
 <html>
 <head>
+<title>은빛마을</title>
 <link href="text.css" rel="stylesheet" type="text/css">
 <script type="text/javascript">
 	function del_ok(b_idx) {

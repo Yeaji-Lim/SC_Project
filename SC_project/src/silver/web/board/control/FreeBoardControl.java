@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,8 @@ public class FreeBoardControl {
 	FreeBoardDAO frdao;
 	@Autowired
 	ServletContext request;
+	@Autowired
+	HttpSession session;
 	//페이징 기법에 필요한 변수들..
 		public static final int BLOCK_LIST = 10;
 		public static final int BLOCK_PAGE = 5;
@@ -74,6 +77,7 @@ public class FreeBoardControl {
 		// 반환객체 생성
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("list", ar);
+		session.setAttribute("free", vo);
 		mv.addObject("nowPage", nowPage);
 		mv.addObject("pageCode", pageCode);
 		mv.addObject("rowTotal", rowTotal);

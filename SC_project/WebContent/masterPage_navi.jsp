@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+
 <link rel="stylesheet" href="css/nav.css" type="text/css"/>
 
 </head>
