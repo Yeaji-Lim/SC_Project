@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/nav.css" type="text/css" />
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <link rel="stylesheet" href="css/sub.css" type="text/css" />
+<link rel="stylesheet" href="css/login.css" type="text/css" />
 <script type="text/javascript">
 
 function reg(){
@@ -48,7 +49,7 @@ function reg(){
 
 </script>
 <style type="text/css">
-#myedit{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+#myedit{position:relative; width:500px; margin-left:150px; height:auto; margin:0 auto; margin-top:280px;}
 </style>
 </head>
 
@@ -59,15 +60,17 @@ function reg(){
 
  <div id="reg">
 				<form action="myedit.sc" method="post" id=myedit>
-					<fieldset>
-						<legend>
-							<img src="img/reg.png" />
+					<fieldset style="width: 400px;">
+						<legend class="myinfo_edit">
+							회원 정보 수정
 						</legend>
 						<table cellpadding="4" cellspacing="0">
 							<tfoot>
 								<tr>
-									<td colspan="2" align="right"><input type="button"
-										value="회원수정" onclick="reg()" /></td>
+									<td colspan="2" align="right">
+									<a href="javascript:reg()"> 
+									<img src="images/mypage/mypage_info_btn.gif" align="middle"/></a>
+									</td>
 								</tr>
 							</tfoot>
 							<tbody>
@@ -79,7 +82,13 @@ function reg(){
 								<tr>
 									<td class="title"><label for="id"><img
 											src="img/gender.png"></label></td>
-									<td>${login_ok.gender}
+									<td class="mypage_info_profile_txt01">
+									<c:if test="${'male' eq login_ok.gender }">
+									남자
+									</c:if>
+									<c:if test="${'female' eq login_ok.gender }">
+									여자
+									</c:if>
 									</td>
 								</tr>
 								<tr>

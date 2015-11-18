@@ -18,10 +18,12 @@
 			<div id="login">
 			<form action="login.sc" method="post"> 	
 			<fieldset>	
-			전화번호 : <input type="text" class="border" name="tel" id="tel" placeholder="전화번호" /><br/> 
-			비밀번호 : <input type="password" class="border" name="pwd" id="pwd" placeholder="비밀번호" style="margin-top:0px" /><br/> 
-			<input type="button" value="회원가입" onclick="openReg()" style="margin-top:10px; width:70px; height:25px;" /> 
-			<input type="button" value="로그인" id="log_bt" onclick="login()" style="margin-top:10px; width:50px; height:25px;" />
+			<legend class="login_txt">로그인</legend>
+			<br/>
+			<a>아이디 :</a> &nbsp;&nbsp;<input type="text" class="border" name="tel" id="tel" placeholder="전화번호" /><br/><br/> 
+			<a>비밀번호 :</a> &nbsp;&nbsp;<input type="password" class="border" name="pwd" id="pwd" placeholder="비밀번호" style="margin-top:0px" /><br/><br/> 
+			<input type="button" value="회원가입" class="reg_bt" onclick="openReg()" style="margin-top:10px; width:70px; height:25px;"/> 
+			<input type="button" value="로그인" class="log_bt" onclick="login()" style="margin-top:10px; width:50px; height:25px;"/>
 			</fieldset>
 			</form>	
 			</div>
@@ -34,12 +36,14 @@
 		
 %>
 			<div id="g_form">
-				<span class="u_name">${login_ok.name} </span> (<span class="u_id">${login_ok.tel}</span>)님 로그인되었습니다.
+				<span class="u_name">${login_ok.name} </span>(<span class="u_id">${login_ok.tel}</span>)님
+				<br/>로그인되었습니다.
 				<br/>
-				
-					<input type="button" value="로그아웃" onclick="javascript:location.href='/SC_project/logout.jsp'" />
+				<br/>
+					
+					<input type="button" value="로그아웃" onclick="javascript:location.href='/SC_project/logout.jsp'" /> &nbsp;&nbsp;&nbsp;
 					<input type="button" value="마이페이지" onclick="javascript:location.href='/SC_project/mypage.sc'" />
-				
+					
 			</div>
 			<% 
 	}//if문의 끝!

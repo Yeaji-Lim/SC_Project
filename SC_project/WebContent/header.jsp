@@ -17,7 +17,7 @@ function openMsg() {
 
 function openLogin(){
 	
-	open('loginHeader.sc','','left=600, top=300, width=330, height=130, scrollbars=0');
+	open('loginHeader.sc','','left=600, top=300, width=330, height=160, scrollbars=0');
 }
 
 

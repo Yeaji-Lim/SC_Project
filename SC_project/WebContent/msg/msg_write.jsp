@@ -10,7 +10,7 @@
 <script type="text/javascript">
 function back(){
 	
-	history.back();
+	window.close();
 }
 	function check(ff){
 		//유효성 검사
