@@ -124,8 +124,6 @@
 					<div class="mypage_info_profile_txt01">
 						주소 :
 						<%=login.getAddr() %></div><br/>
-					
-
 				</div>
 			</div>
 		</div>

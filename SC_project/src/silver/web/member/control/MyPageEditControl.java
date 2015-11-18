@@ -30,8 +30,6 @@ public class MyPageEditControl {
 	
 	@RequestMapping(value="myedit.sc", method=RequestMethod.GET)
 	public ModelAndView View(LoginVO vo)throws Exception{
-	
-		vo = (LoginVO)session.getAttribute("login_ok");
 		String tel = vo.getTel();
 		LoginVO dvo = dao.getUser(tel);
 		ModelAndView mv = new ModelAndView();
@@ -42,8 +40,7 @@ public class MyPageEditControl {
 	
 	@RequestMapping(value="myedit.sc", method=RequestMethod.POST)
 	public ModelAndView Edit(LoginVO vo)throws Exception{
-		LoginVO dvo = (LoginVO)session.getAttribute("login_ok");
-		String tel = dvo.getTel();
+		String tel = vo.getTel();
 		vo.setTel(tel);
 		/*System.out.println(vo.getTel());
 		System.out.println(vo.getAddr());

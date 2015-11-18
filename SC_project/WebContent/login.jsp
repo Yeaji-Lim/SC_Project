@@ -37,8 +37,8 @@
 				<span class="u_name">${login_ok.name} </span> (<span class="u_id">${login_ok.tel}</span>)님 로그인되었습니다.
 				<br/>
 				
-					<input type="button" value="로그아웃" onclick="logout()" />
-					<input type="button" value="마이페이지" onclick="myDisk()" />
+					<input type="button" value="로그아웃" onclick="javascript:location.href='/SC_project/logout.jsp'" />
+					<input type="button" value="마이페이지" onclick="javascript:location.href='/SC_project/mypage.sc'" />
 				
 			</div>
 			<% 

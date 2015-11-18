@@ -35,7 +35,7 @@
 		set addr= #{addr}
 			,nickname= #{nickname}
 			,pwd= #{pwd}
-			where tel = #{tel}
+	where tel = #{tel}
    </update>
    
    <!-- 회원삭제 update -->
