@@ -14,7 +14,7 @@ import silver.web.member.dao.LoginDAO;
 import silver.web.member.vo.LoginVO;
 
 @Controller
-public class EditMypageControl {
+public class MyPageEditControl {
 
 	@Autowired
 	LoginDAO dao;
@@ -45,13 +45,13 @@ public class EditMypageControl {
 		LoginVO dvo = (LoginVO)session.getAttribute("login_ok");
 		String tel = dvo.getTel();
 		vo.setTel(tel);
-		System.out.println(vo.getTel());
+		/*System.out.println(vo.getTel());
 		System.out.println(vo.getAddr());
 		System.out.println(vo.getNickname());
-		System.out.println(vo.getPwd());
+		System.out.println(vo.getPwd());*/
 		dao.edit(vo);
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/main");
+		mv.setViewName("/myPage/myPageMain");
 		
 		return mv;
 	}

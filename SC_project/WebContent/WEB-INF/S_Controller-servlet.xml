@@ -22,7 +22,7 @@
     <bean id="mypage" class="silver.web.member.control.MyPageMainControl" autowire="byName"/>
     
     <!-- 회원정보수정 -->
-	<bean id="myedit" class="silver.web.member.control.EditMypageControl" autowire="byName"/>
+	<bean id="myedit" class="silver.web.member.control.MyPageEditControl" autowire="byName"/>
 
 	<!-- 회원 탈퇴 -->
 	<bean id="mydel" class="silver.web.member.control.DelUserControl" autowire="byName"/>

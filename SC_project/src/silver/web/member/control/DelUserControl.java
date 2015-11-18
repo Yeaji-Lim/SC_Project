@@ -35,7 +35,7 @@ public class DelUserControl{
 		dao.delBbs(vo);
 		ModelAndView mv = new ModelAndView();
 		session.removeAttribute("login_ok");
-		mv.setViewName("/main");
+		mv.setViewName("/main.sc");
 		return mv;
 	}
 }

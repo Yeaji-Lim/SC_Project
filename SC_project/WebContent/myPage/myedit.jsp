@@ -5,7 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<link rel="stylesheet" href="css/nav.css" type="text/css" />
+<link rel="stylesheet" href="css/public.css" type="text/css" />
+<link rel="stylesheet" href="css/sub.css" type="text/css" />
 <script type="text/javascript">
 
 function reg(){
@@ -44,7 +46,14 @@ function reg(){
 
 
 </script>
+<style type="text/css">
+#myedit{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+</style>
 </head>
+
+<jsp:include page="../header.jsp"></jsp:include>
+<jsp:include page="../myPage_navi.jsp"></jsp:include>
+
 <body>
 
  <div id="reg">
@@ -64,18 +73,18 @@ function reg(){
 								<tr>
 									<td class="title"><label for="name"><img
 											src="img/name.png"></label></td>
-									<td>이름:"${login_ok.name}"</td>
+									<td>${login_ok.name}</td>
 								</tr>
 								<tr>
 									<td class="title"><label for="id"><img
 											src="img/gender.png"></label></td>
-									<td>성별 :"${login_ok.gender}"
+									<td>${login_ok.gender}
 									</td>
 								</tr>
 								<tr>
 									<td class="title"><label for="birth"><img
 											src="img/birth.png"></label></td>
-									<td>생일"${login_ok.birth }"</td>
+									<td>${login_ok.birth }</td>
 								</tr>
 								
 								<tr>
