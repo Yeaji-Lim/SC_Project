@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mas">
+
+	<!-- 페이징 기법을 위한 
+	 전체게시물의 수를 반환 -->
+	<select id="totalCount" resultType="int">
+		SELECT COUNT(*) FROM silver_t
+		 
+	</select>
+	 
+	<!-- 페이징 기법을 활용한 select -->
+	<select id="list" 
+	resultType="silver.web.member.vo.LoginVO" 
+	parameterType="java.util.Map">
+		SELECT * FROM (
+			SELECT rownum as r_num, a.* FROM (
+				SELECT * FROM silver_t
+				
+				ORDER BY idx DESC
+			) a
+		) WHERE r_num BETWEEN #{begin} AND #{end}
+	
+	</select>
+	
+
+	
+	<!-- 게시물 보기 기능을 수행하는 select
+	  기본키(seq)값으로 검색한다. -->
+	<select id="getBoard" 
+	parameterType="String" 
+	resultType="silver.web.member.vo.LoginVO">
+		SELECT * FROM silver_t
+		WHERE idx=#{n}
+	</select>  
+	
+
+<update id="edit" 
+	parameterType="silver.web.member.vo.LoginVO">
+		UPDATE silver_t
+		SET addr=#{addr},
+			nickname=#{nickname},
+			pwd=#{pwd}
+		WHERE idx=#{idx}
+	</update>
+	
+	
+<update id="del" parameterType="String">
+	UPDATE silver_t set status=0
+	where idx=#{idx}
+	</update>
+
+
+	
+		
+
+</mapper>
