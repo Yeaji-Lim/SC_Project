@@ -27,8 +27,12 @@
 <style type="text/css">
 #infoList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
 </style>
-
 <script type="text/javascript">
+	function back(){
+		
+		history.back();
+	}
+
 	function download(fname){
 	
 		location.href="FileDownload?dir=upload&filename="+fname;
@@ -44,6 +48,7 @@
 		}
 		
 		ff.submit();
+		
 		
 	}
 	
@@ -72,19 +77,17 @@
 				  <td width="150" align="center" bgcolor="#F2F7F9">${vo.regdate}</td>
 				</tr>
 				<tr>
-				  <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">메일</font></td>
-				  <td bgcolor="#F2F7F9"></td>
 				  <td align="center" bgcolor="#669AB3"><font color="#FFFFFF">조회수</font></td>
 				  <td align="center" bgcolor="#F2F7F9">${vo.hit}</td>
 				</tr>
-				<tr>
+				<%-- <tr>
 				  <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">첨부파일</font></td>
 				  <td colspan="3" bgcolor="#F2F7F9">
 				  <a href="javascript:download('${vo.uploadFileName}')">
 				  	${vo.uploadFileName}
 				  </a>
 				  </td>
-				</tr>
+				</tr> --%>
 				<tr>
 				  <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">제목</font></td>
 				  <td colspan="3" bgcolor="#F2F7F9">${vo.title}</td>
@@ -102,9 +105,10 @@
 			</td>
 		  </tr>
 		</table>
-		<table width="556" border="0" cellspacing="0" cellpadding="0" align="center">
+		<table width="560" border="0" cellspacing="0" cellpadding="0" align="center">
 		  <tr>
-			<td height="20" valign="middle"><img src="/images/sub_it/point_line.gif" width="556" height="3"></td>
+			<td height="20" valign="middle"><img src="/images/sub_it/point_line.gif" width="560" height="3"></td>
+			
 		  </tr>
 		  <tr>
 			<td align="right"> <table width="100%" border="0" cellspacing="0" cellpadding="0">

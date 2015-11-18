@@ -9,7 +9,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">
+
+function back(){
+	
+	history.back();
+}
+
 function check(ff){
+	
 	
 	/* var title = document.forms[0].title.value;
 	var content = document.forms[0].content.value;
@@ -119,7 +126,7 @@ function check(ff){
                       </td>
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
-                      <input type="reset" value="재입력"/>
+                      <input type="button" onclick="back()" value="뒤로"/>
                       </td>
                     </tr>
                   </table></td>

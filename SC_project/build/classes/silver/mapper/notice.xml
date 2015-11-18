@@ -16,7 +16,8 @@
 	parameterType="java.util.Map">
 		SELECT * FROM (
 			SELECT rownum as r_num, a.* FROM (
-				SELECT * FROM silver_notice where status = 0
+				SELECT b_idx,subject,
+		 nickname,content,to_char(write_date,'yy-mm-dd')write_date, ip,status FROM silver_notice where status = 0
 				) a
 		) WHERE r_num BETWEEN #{begin} AND #{end}
 	
@@ -24,7 +25,8 @@
 	
 	<!--메인에 띄울 리스트-->
 	<select id="mainList" resultType="silver.web.board.vo.NoticeBoardVO">
-		select * from silver_notice
+		select b_idx,subject,
+		 nickname,content,to_char(write_date,'yy-mm-dd')write_date, ip,status from silver_notice
 		order by write_date asc 
 	</select>
 	
@@ -40,7 +42,8 @@
 	<select id="notice_getBoard" 
 	parameterType="String" 
 	resultType="silver.web.board.vo.NoticeBoardVO">
-		SELECT * FROM silver_notice
+		SELECT b_idx,subject,
+		 nickname,content,to_char(write_date,'yy-mm-dd')write_date, ip,status FROM silver_notice
 		WHERE b_idx=#{n}
 	</select> 
 	<!--공지사항 수정 -->

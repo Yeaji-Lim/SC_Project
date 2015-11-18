@@ -16,7 +16,7 @@
 	resultType="silver.web.matching.vo.MatchingVO">
 		SELECT * FROM (
 			SELECT rownum r_num,a.* FROM(
-				SELECT * FROM matchboard
+				SELECT mb_num, mb_subject, mb_writer, mb_content, to_char(mb_regdate,'yy-mm-dd')mb_regdate, mb_status, mb_city, mb_state,mb_location FROM matchboard
 				ORDER BY mb_num DESC 
 			) a
 		) WHERE r_num BETWEEN #{begin} AND #{end}
@@ -24,7 +24,7 @@
 	
 	<!--메인에 띄울 리스트-->
 	<select id="mainList" resultType="silver.web.matching.vo.MatchingVO">
-		select * from matchboard
+		select mb_num, substr(mb_subject,1,5)mb_subject, mb_writer, mb_content, to_char(mb_regdate,'yy-mm-dd')mb_regdate, mb_status, mb_city, mb_state,mb_location from matchboard
 		order by mb_regdate asc
 	</select>
 	
@@ -37,7 +37,7 @@
 		
 	<!--매칭 게시판 보기 select-->
 	<select id="mb_view" parameterType="String" resultType="silver.web.matching.vo.MatchingVO">
-		SELECT * FROM matchboard
+		SELECT mb_num, mb_subject, mb_writer, mb_content, to_char(mb_regdate,'yy-mm-dd')mb_regdate, mb_status, mb_city, mb_state,mb_location FROM matchboard
 		WHERE mb_num = #{mb_num}
 	</select>
 	

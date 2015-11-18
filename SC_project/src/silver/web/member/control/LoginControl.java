@@ -83,7 +83,7 @@ public class LoginControl {
 			mv.setViewName("/myPage/loginSuccess");
 		}
 		else
-			mv.setViewName("/error");
+			mv.setViewName("/myPage/loginFail");
 		return mv;
 	}
 

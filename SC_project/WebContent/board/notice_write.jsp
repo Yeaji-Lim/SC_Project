@@ -17,6 +17,10 @@
 </style>
 
 <script type="text/javascript">
+function back(){
+	
+	history.back();
+}
 function check(ff){
 	
 	var title = document.forms[0].title.value;
@@ -93,7 +97,7 @@ function check(ff){
                       </td>
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
-                      <input type="reset" value="재입력"/>
+                      <input type="button" onclick="back()" value="뒤로"/>
                       </td>
                     </tr>
                   </table></td>

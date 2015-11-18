@@ -60,7 +60,7 @@
 				<td>&nbsp;</td>
 			  </tr>
 			</table>
-			<table width="556" border="0" cellspacing="0" cellpadding="0">
+			<table width="550" border="0" cellspacing="0" cellpadding="0">
 			  <tr>
 				<td height="2" bgcolor="#C3C3C3"></td>
 			  </tr>
@@ -69,7 +69,7 @@
 				<table width="100%" border="0" cellspacing="1" cellpadding="2">
 					<tr>
 					  <td height="20" align="center" bgcolor="#669AB3" width="56"><font color="#FFFFFF">번호</font></td>
-					  <td height="20" align="center" bgcolor="#669AB3" width="270"><font color="#FFFFFF">제목</font></td>
+					  <td height="20" align="center" bgcolor="#669AB3" width="200"><font color="#FFFFFF">제목</font></td>
 					  <td height="20" align="center" bgcolor="#669AB3" width="80"><font color="#FFFFFF">글쓴이</font></td>
 					  <td height="20" align="center" bgcolor="#669AB3" width="100"><font color="#FFFFFF">날짜</font></td>
 					  <td height="20" align="center" bgcolor="#669AB3" width="50"><font color="#FFFFFF">조회수</font></td>
@@ -112,9 +112,9 @@
 				  </table></td>
 			  </tr>
 			</table>
-			<table width="556" border="0" cellspacing="0" cellpadding="0">
+			<table width="550" border="0" cellspacing="0" cellpadding="0">
 			  <tr>
-				<td height="20" valign="middle"><img src="/images/sub_it/point_line.gif" width="556" height="3"></td>
+				<td height="20" valign="middle"><img src="/images/sub_it/point_line.gif" width="550" height="3"></td>
 			  </tr>
 			  <tr>
 				<td align="right"> <table width="100%" border="0" cellspacing="0" cellpadding="0">

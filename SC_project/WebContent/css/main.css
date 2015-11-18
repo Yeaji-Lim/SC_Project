@@ -96,21 +96,25 @@
 .left{
 	float: left;
 	width: 100px;
-	margin-left: 10px;
+	margin-left: 30px;
 }
 
 .left a{
 	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
 	font-size: 15px;
+	text-decoration: none;
 }
 
 .right{
 	float: right;
 	width: 100px;
-	margin-right: 10px;	
+	margin-right: 20px;	
+	text-align: center;
 }
 
-.right{
+.right a{
 	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
 	font-size: 15px;
+	text-decoration: none;
+	
 }

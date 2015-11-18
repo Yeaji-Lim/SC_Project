@@ -3,9 +3,62 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style type="text/css">
+
+	.success{
+		color: blue;
+		font-weight: bold;
+	}
+	
+	.fail{
+		color: red;
+		font-weight: bold;
+	}
+	
+	div#box{
+		display: inline;
+		font-size: 12px;
+	}
+
+
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="js/httpRequest.js"></script>
+
 <title>은빛마을</title>
+
 <script type="text/javascript">
+
+	function exe(){
+		
+	var obj = document.getElementById("nickname");
+	var nickname = obj.value;
+	
+	if(nickname.length > 1){
+		
+		
+		var param = "nickname="+encodeURIComponent(nickname);
+		
+		sendRequest("checkNICK.sc", param, res, "post", true);
+		
+	}else{
+		
+		document.getElementById("box").innerHTML = "";
+	}
+	}
+	
+	
+	function res() {
+		
+		if(xhr.readyState == 4 && xhr.status == 200){
+			
+		document.getElementById("box").innerHTML = xhr.responseText;
+		}
+	}
+ 
+
+
 
 function reg(){
 		
@@ -41,8 +94,8 @@ function reg(){
 	
 }
 
-
 </script>
+
 </head>
 <body>
 
@@ -104,8 +157,8 @@ function reg(){
 								<tr>
 									<td class="title"><label for="nickname"><img
 											src="img/nickname.png"></label></td>
-									<td><input type="text" name="nickname" id="nickname"
-										size="30" /></td>
+									<td><input type="text" name="nickname" id="nickname" onkeyup="exe()"
+										size="30" /><div id="box"></div></td>
 								</tr>
 								<tr>
 									<td class="title"><label for="addr"><img

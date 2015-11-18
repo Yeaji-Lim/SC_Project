@@ -44,5 +44,10 @@
    		set status= 0
    		where tel = #{tel}
    </update>
+   
+   <!--닉네임 중복체크  -->
+   <select id="searchNICK" resultType="silver.web.member.vo.LoginVO" parameterType="String">
+	select * from silver_t where nickname=#{nickname}
+	</select>
 
 </mapper>

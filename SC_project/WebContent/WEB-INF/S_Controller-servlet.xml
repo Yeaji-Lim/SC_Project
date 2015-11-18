@@ -33,6 +33,8 @@
 	<!-- 회원 탈퇴 -->
 	<bean id="mydel" class="silver.web.member.control.DelUserControl" autowire="byName"/>
 	
+	<!-- 닉네임 체크 부분 -->
+	<bean id="check" class="silver.web.member.control.CheckNICKcontrol"/>
     
     
     <!--문의사항 보여주는 bean-->
@@ -192,6 +194,11 @@
 	<bean id="masdel.sc" class="silver.master.control.MasterDControl" autowire="byName"/>
 	
 	
+	
+	<!-- 뒤로가기 -->
+	<bean name="/back.sc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="/myPage/back"></property>
+	</bean>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"/>

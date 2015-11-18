@@ -53,5 +53,21 @@ public class LoginDAO {
 	public void delBbs(LoginVO vo){
 		template.update("silver.del",vo);
 	}
+	
+	//닉네임 중복 체크
+public boolean checkNICK(String nickname){
+		
+
+		LoginVO vo = template.selectOne("silver.searchNICK", nickname);
+		
+		boolean check = false;
+		
+		if(vo==null)
+			check = true;
+		
+		
+		return check;
+		
+	}
 
 }

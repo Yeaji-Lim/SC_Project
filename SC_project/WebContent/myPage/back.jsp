@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>은빛마을</title>
-</head>
+<title>Insert title here</title>
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript">
 
-$(function(){
-	
-	opener.location.reload();
-	
-	window.close();
-	
-	
-});
+	$(function(){
+		history.back()
+	});
 
 </script>
+
+</head>
+<body>
+
+</body>
+</html>

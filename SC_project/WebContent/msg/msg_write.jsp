@@ -8,6 +8,10 @@
 <title>은빛마을</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
+function back(){
+	
+	history.back();
+}
 	function check(ff){
 		//유효성 검사
 		ff.submit();
@@ -72,7 +76,7 @@
                       </td>
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
-                      <input type="reset" value="재입력"/>
+                      <input type="button" onclick="back()" value="뒤로"/>
                       
                       </td>
                     </tr>

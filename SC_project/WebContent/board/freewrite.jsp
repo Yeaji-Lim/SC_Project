@@ -9,6 +9,10 @@
 <title>은빛마을</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">
+function back(){
+	
+	history.back();
+}
 function check(ff){
 	
 	ff.submit();
@@ -69,6 +73,7 @@ function check(ff){
                       <td bgcolor="#F2F7F9" align="left"> <input type="password" name="pwd" cssStyle="width:200px" theme="simple"/>
                         <font color="#0066CC">* 삭제.수정시 필요</font> </td>
                     </tr> -->
+                    <input type="button" value="뒤로" onclick="back()"/>
                   </table></td>
               </tr>
             </table>
@@ -84,7 +89,7 @@ function check(ff){
                       </td>
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
-                      <input type="reset" value="재입력"/>
+                      <input type="button" onclick="back()" value="뒤로"/>
                       </td>
                     </tr>
                   </table></td>

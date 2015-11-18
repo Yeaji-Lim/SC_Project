@@ -1,12 +1,10 @@
 package silver.web.board.vo;
 
-import java.sql.Timestamp;
-
 public class QNABoardVO {
 	
-	private String qb_subject, qb_writer, qb_content;
+	private String qb_subject, qb_writer, qb_content,qb_regdate;
 	private int qb_num, qb_readcount;
-	private Timestamp qb_regdate;
+	
 	private int qb_groups, qb_step, qb_lev;
 	
 	private int nowPage;
@@ -51,11 +49,11 @@ public class QNABoardVO {
 		this.qb_readcount = qb_readcount;
 	}
 
-	public Timestamp getQb_regdate() {
+	public String getQb_regdate() {
 		return qb_regdate;
 	}
 
-	public void setQb_regdate(Timestamp qb_regdate) {
+	public void setQb_regdate(String qb_regdate) {
 		this.qb_regdate = qb_regdate;
 	}
 

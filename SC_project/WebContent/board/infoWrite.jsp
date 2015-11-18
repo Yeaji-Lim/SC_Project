@@ -13,6 +13,10 @@
  #infow{position:relative; width:600px; heigth:auto; margin:0 auto; margin-top:255px;}
 </style>
 <script type="text/javascript">
+function back(){
+	
+	history.back();
+}
 	function check(ff){
 		
 		var title = document.forms[0].title.value;
@@ -74,6 +78,7 @@
                       <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">내용</font></td>
                       <td bgcolor="#F2F7F9" align="left"> <textarea name="content" cols="50" rows="10" theme="simple"></textarea></td>
                     </tr>
+                    
                     <!-- <tr>
                       <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">비밀번호</font></td>
                       <td bgcolor="#F2F7F9" align="left"> <input type="password" name="pwd" cssStyle="width:200px" theme="simple"/>
@@ -94,7 +99,7 @@
                       </td>
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
-                      <input type="reset" value="재입력"/>
+                      <input type="button" onclick="back()" value="뒤로"/>
                       <input type="hidden" value="1" name="pwd"/>
                       </td>
                     </tr>

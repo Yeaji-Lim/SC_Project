@@ -43,7 +43,9 @@
 				<a href="myedit.sc"> 
 				<img src="images/mypage/mypage_info_btn.jpg" alt="회원정보수정" align="middle"></a>
 				 &nbsp;&nbsp;&nbsp;
-				<a href="javascript:openMsg()">쪽지보기</a>
+				<a href="javascript:openMsg()"> 
+				<img src="images/show_msg.jpg" alt="쪽지보기" align="middle"></a>
+				&nbsp;&nbsp;&nbsp;
 			</div>
 
 			<div class="mypage_info_profile">

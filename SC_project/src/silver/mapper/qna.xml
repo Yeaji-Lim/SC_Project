@@ -16,7 +16,7 @@
 	resultType="silver.web.board.vo.QNABoardVO">
 		SELECT * FROM (
 			SELECT rownum r_num,a.* FROM(
-				SELECT * FROM QNABOARD
+				SELECT qb_num,qb_subject,qb_writer,qb_content,to_char(qb_regdate,'yy-mm-dd')qb_regdate,qb_readcount,qb_groups,qb_step,qb_lev FROM QNABOARD
 				ORDER BY qb_groups DESC, qb_lev ASC 
 			) a
 		) WHERE r_num BETWEEN #{begin} AND #{end}
@@ -46,7 +46,7 @@
 
 	<!--QNABoard 보기 select-->
 	<select id="qb_view" parameterType="String" resultType="silver.web.board.vo.QNABoardVO">
-		SELECT * FROM QNABOARD
+		SELECT qb_num, qb_subject, qb_writer, qb_content,to_char(qb_regdate,'yy-mm-dd')qb_regdate, qb_readcount, qb_groups, qb_step, qb_lev FROM QNABOARD
 		WHERE qb_num = #{qb_num}
 	</select>
 	

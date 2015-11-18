@@ -74,14 +74,14 @@ function check(ff){
        <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">내용</font></td>
        <td bgcolor="#F2F7F9" align="left"> <textarea name="content" cols="50" rows="10" theme="simple">${vo.content }</textarea></td>
       </tr>
-       <tr>
+       <%-- <tr>
        <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">첨부파일</font></td>
        <td bgcolor="#F2F7F9" align="left">
         <input type="file" name="upload" cssStyle="width:300px" theme="simple"/>
       <c:if test="${vo.uploadFileName ne '' }"><span style="color:5d5d5d">(${vo.uploadFileName })</span></c:if>
       
        </td>
-      </tr>
+      </tr> --%>
        <tr>
        
    <input type="hidden" name="pwd" value="1" cssStyle="width:200px" theme="simple"/>

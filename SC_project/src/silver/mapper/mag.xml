@@ -17,7 +17,8 @@
 	parameterType="java.util.Map">
 		SELECT * FROM (
 			SELECT rownum as r_num, a.* FROM (
-				SELECT * FROM msg_t where status = 0 and send_tel like #{send_tel}
+				SELECT b_idx,send_tel,
+		 request_tel,content,to_char(write_date,'yy-mm-dd')write_date,status,subject FROM msg_t where status = 0 and send_tel like #{send_tel}
 				) a
 		) WHERE r_num BETWEEN #{begin} AND #{end}
 	
@@ -33,7 +34,8 @@
 	<select id="msg_getBoard" 
 	parameterType="String" 
 	resultType="silver.web.message.vo.MsgVO">
-		SELECT * FROM msg_t
+		SELECT b_idx,send_tel,
+		 request_tel,content,to_char(write_date,'yy-mm-dd')write_date,status,subject FROM msg_t
 		WHERE b_idx=#{n}
 	</select> 
 	<!-- 공지사항 삭제 -->

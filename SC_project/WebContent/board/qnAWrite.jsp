@@ -16,6 +16,10 @@ function check(ff){
 }
 </script>
 <style type="text/css">
+	function back(){
+		
+		history.back();
+	}
 	#qbWrite{
 		position:relative; width:600px; height:auto; margin:0 auto; margin-top:260px;
 	}
@@ -85,7 +89,7 @@ function check(ff){
                       </td>
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
-                      <input type="reset" value="재입력"/>
+                      <input type="button" onclick="back()" value="뒤로"/>
                       </td>
                     </tr>
                   </table></td>
