@@ -17,7 +17,7 @@
 <body>
 <table width="556" border="0" cellspacing="0" cellpadding="0" align="center">
 		  <tr>
-		    <td align="center"><u><b>쪽지보기</b></u></td>
+		    <td align="center"><b>쪽지보기</b></td>
 		  </tr>
 		  <tr>
 			<td height="2" bgcolor="#C3C3C3"></td>

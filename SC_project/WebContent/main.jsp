@@ -89,11 +89,11 @@
 	<!--게시판들 보기 시작-->
 	<div class="main_small_board">
 	<div class="free_small">
-		<p class="freetitle"><a>자유게시판</a></p>
+		<p class="freetitle"><a>[자유게시판]</a></p>
 		<c:forEach var="vo" items="${list1 }" varStatus="stat">
 			<div class="freebox">
 			<div class="left">
-				<a href="#" class="news_a">${vo.fb_subject }<span style="font-size: 8pt;"></span></a>
+				<a href="freeview.sc?fb_num=${vo.fb_num }" class="news_a">${vo.fb_subject }<span style="font-size: 8pt;"></span></a>
 			</div>
 			
 			<%-- <fmt:parseDate value="${vo.fb_regdate}" var="dateFmt" pattern="yyyyMMddHHmmss"/>
@@ -108,11 +108,11 @@
 
 	<div class="main_small_board">
 	<div class="match_small">
-		<p class="matchtitle"><a>요양사를 소개합니다</a></p>
+		<p class="matchtitle"><a>[요양사를 소개합니다]</a></p>
 		<c:forEach var="vo" items="${list2 }" varStatus="stat">
 			<div class="matchbox">
 			<div class="left">
-				<a href="#" class="news_a">${vo.mb_subject }<span
+				<a href="mb_view.sc?mb_num=${vo.mb_num }" class="news_a">${vo.mb_subject }<span
 					style="font-size: 8pt;"></span></a>
 			</div>
 			<div class="right">${vo.mb_regdate }</div>
@@ -123,11 +123,11 @@
 
 	<div class="main_small_board">
 	<div class="notice_small">
-	<p class="noticetitle"><a>공지사항</a></p>
+	<p class="noticetitle"><a>[공지사항]</a></p>
 		<c:forEach var="vo" items="${list3 }" varStatus="stat">
 			<div class="noticebox">
 			<div class="left">
-				<a href="#" class="news_a">${vo.subject }<span
+				<a href="notice_view.sc?seq=${vo.b_idx }" class="news_a">${vo.subject }<span
 					style="font-size: 8pt;"></span></a>
 			</div>
 			<div class="right">${vo.write_date }</div>

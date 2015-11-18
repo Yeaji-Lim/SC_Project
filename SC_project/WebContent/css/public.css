@@ -1,8 +1,9 @@
 html, body {
+	position:absolute;
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	height: 1000px;;
+	/* height: 1000px; */
 }
 
 #header {
@@ -93,7 +94,7 @@ html, body {
 	line-height: 30px;
 	font-weight: bold;
 	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
-	background-color: #FFBB00 !important;
+	background-color: #edffa4! important;
 }
 
 

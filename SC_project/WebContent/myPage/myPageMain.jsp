@@ -8,7 +8,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>MyPage</title>
 <link rel="stylesheet" href="css/nav.css" type="text/css" />
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <link rel="stylesheet" href="css/sub.css" type="text/css" />

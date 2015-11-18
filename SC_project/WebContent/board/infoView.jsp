@@ -56,7 +56,7 @@
 
 
 		  <tr>
-		    <td align="center"><u><b>BBS 내용보기</b><u></td>
+		    <td align="center"><u><b>정보게시판 글보기</b><u></td>
 		  </tr>
 		  <tr>
 			<td height="2" bgcolor="#C3C3C3"></td>

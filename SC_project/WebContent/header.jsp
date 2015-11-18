@@ -76,8 +76,7 @@ function openMsg() {
 
 
 		<p id="banner">
-			<img src="images/top_banner_garden.gif"
-				style="width: 1600px; height: 150px;" />
+			<img src="images/top_banner_bar.png"/>
 		</p>
 	</div>
 

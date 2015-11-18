@@ -2,7 +2,7 @@
 .main_small_board{
 	float:left;
 	width: 300px;
-	height: 400px;
+	height: 300px;
 	border: 2px solid black;
 	margin-left: 80px;
 	margin-top: 300px;
@@ -51,8 +51,8 @@
 }
 
 .freetitle{
-	border: 1px solid red;
-	background-color: pink;
+	
+	
 	text-align: center;
 }
 
@@ -65,8 +65,7 @@
 
 
 .matchtitle{
-	border: 1px solid red;
-	background-color: pink;
+	
 	text-align: center;
 }
 
@@ -80,8 +79,7 @@
 
 
 .noticetitle{
-	border: 1px solid red;
-	background-color: pink;
+	
 	text-align: center;
 }
 

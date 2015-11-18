@@ -9,7 +9,7 @@
   resultType="silver.web.member.vo.LoginVO"
   parameterType="java.util.Map">
   	SELECT * FROM silver_t
-  	WHERE tel=#{tel} AND pwd=#{pwd}
+  	WHERE tel=#{tel} AND pwd=#{pwd} AND status = 1
   </select>
   
   <!-- 회원가입 insert -->
@@ -20,5 +20,21 @@
   	VALUES(#{tel},#{name},#{birth},#{addr}, #{gender},
   	1, sysdate, #{pwd}, SEQ_SILVER_IDX.NEXTVAL, #{nickname})
   </insert>
+  
+   <!-- 회원 수정 update -->
+   <update id="edit" parameterType="silver.web.member.vo.LoginVO">
+   	UPDATE silver_t
+		set addr= #{addr}
+			,nickname= #{nickname}
+			,pwd= #{pwd}
+			where tel = #{tel}
+   </update>
+   
+   <!-- 회원삭제 update -->
+   <update id="del" parameterType="silver.web.member.vo.LoginVO">
+   	update silver_t
+   		set status= 0
+   		where tel = #{tel}
+   </update>
 
 </mapper>

@@ -36,7 +36,7 @@ function check(ff){
           <td align="center" height="10"></td>
         </tr>
         <tr>
-          <td align="center"><u><b>문의사항 글쓰기</b></u></td>
+          <td align="center"><b>문의사항 글쓰기</b></td>
         </tr>
         <tr>
           <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

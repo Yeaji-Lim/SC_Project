@@ -6,7 +6,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>매칭게시판 수정</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <script type="text/javascript">
 function check(ff){
@@ -47,7 +46,7 @@ function check(ff){
           <td align="center" height="10"></td>
         </tr>
         <tr>
-          <td align="center"><u><b>매칭게시판 수정</b></u></td>
+          <td align="center"><b>매칭게시판 수정</b></td>
         </tr>
         <tr>
           <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

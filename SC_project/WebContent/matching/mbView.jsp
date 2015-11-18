@@ -26,7 +26,7 @@
 	}
 	
 	function msg_open(){
-		open('msgWriteForm.sc','','left=50, top=50, width=600, height=300, scrollbars=0');
+		open('msgWriteForm.sc','','left=50, top=50, width=600, height=350, scrollbars=0');
 	}
 	
 	function mbDel(num){
@@ -46,7 +46,7 @@
 
 <table width="556" border="0" cellspacing="0" cellpadding="0" align="center" id="mbView">
 		  <tr>
-		    <td align="center"><u><b>매칭게시판 글보기</b></u></td>
+		    <td align="center"><b>매칭게시판 글보기</b></td>
 		    
 		  </tr>
 		
@@ -91,9 +91,22 @@
 		  
 		  <tr>
 		  	<td colspan="3" align="left">
-		  		<input type="button" value="매칭하기" onclick="msg_open()" style="cursor:pointer">
-		  		
-		  	</td>
+		  <%
+		 	 if(login != null){
+		  %>
+		  
+		  		<input type="button" value="매칭하기" onclick="msg_open()" style="cursor:pointer"/>
+		  	
+		  <%
+		 	 }else{
+		  %>
+		  
+		  	<input type="button" value="매칭하기" onclick="msg()" style="cursor:pointer"/>
+		  
+		  <% 
+		  	}
+		  %>
+		  </td>
 		  </tr>
 		  
 		</table>

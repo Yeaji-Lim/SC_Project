@@ -6,7 +6,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <script type="text/javascript">
 	function check(ff){
 		//유효성 검사
@@ -26,7 +25,7 @@
           <td align="center" height="10"></td>
         </tr>
         <tr>
-          <td align="center"><u><b>쪽지보내기</b></u></td>
+          <td align="center"><b>쪽지보내기</b></td>
         </tr>
         <tr>
           <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

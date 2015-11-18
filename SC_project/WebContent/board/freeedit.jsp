@@ -49,7 +49,7 @@ function check(ff){
           <td align="center" height="10"></td>
         </tr>
         <tr>
-          <td align="center"><u><b>BBS 수정</b></u></td>
+          <td align="center"><u><b>자유게시판 글 수정</b></u></td>
         </tr>
         <tr>
           <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

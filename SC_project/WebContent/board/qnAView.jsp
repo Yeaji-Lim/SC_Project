@@ -42,7 +42,7 @@
 
 <table width="556" border="0" cellspacing="0" cellpadding="0" align="center" id="qbView">
 		  <tr>
-		    <td align="center"><u><b>문의사항 글보기</b><u></td>
+		    <td align="center"><b>문의사항 글보기</b></td>
 		    
 		  </tr>
 		

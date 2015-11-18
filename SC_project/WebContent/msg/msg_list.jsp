@@ -21,7 +21,7 @@
 		  <td align="center" height="10"></td>
 		</tr>
 		<tr>
-		  <td align="center"><u><b>쪽지보기</b></u></td>
+		  <td align="center"><b>쪽지함</b></td>
 		</tr>
 		<tr>
 		  <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">

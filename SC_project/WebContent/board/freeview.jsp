@@ -81,7 +81,7 @@ function cc(){
 <body>
 <table width="556" border="0" cellspacing="0" cellpadding="0" align="center" id="frView">
 		  <tr>
-		    <td align="center"><u><b>BBS 내용보기</b><u></td>
+		    <td align="center"><b>자유게시판 글보기</b></td>
 		  </tr>
 		  <tr>
 			<td height="2" bgcolor="#C3C3C3"></td>
@@ -130,7 +130,7 @@ function cc(){
 				  <td align="left">
 					&nbsp;
 				  </td>
-				 <%--  <td width="241" align="right"><img src="images/button/but_answer.gif" width="56" height="21" onClick="JavaScript:location.href='answer.inc?seq=${seq}&groups=${vo.groups }&step=${vo.step }&lev=${vo.lev }&nowPage=${nowPage }'" style="cursor:pointer"> --%>
+				 
 					<img src="images/button/but_modify.gif" width="56" height="21" onClick="javascript:location.href='freeedit.sc?fb_num=${fb_num}&nowPage=${nowPage }'" style="cursor:pointer">
 					<img src="images/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='freelist.sc?nowPage=${nowPage}'" style="cursor:pointer">
 
@@ -138,14 +138,14 @@ function cc(){
 					</td>
 				</tr>
 			  </table></td>
-			  		댓글들</hr>
-		<c:forEach items="${list1 }" var="list">
+			  		<%--댓글들</hr>
+		 <c:forEach items="${list1 }" var="list">
 		<div>
 			이름:${list.fb_r_write } &nbsp;&nbsp;
 			날짜:${list.fb_r_regdate }<br/>
 			내용:${list.fb_r_content }
 		</div>
-</c:forEach>
+</c:forEach> --%>
 		  </tr>
 		  <tr>
 			<td height="19">&nbsp;</td>
