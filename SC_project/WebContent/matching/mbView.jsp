@@ -9,8 +9,6 @@
 <head>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<link href="text.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 	#mbView{
 		position:relative; width:600px; height:auto; margin:0 auto; margin-top:260px;

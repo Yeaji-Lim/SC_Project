@@ -13,9 +13,9 @@
 	<div id="p_nav">
 		<p id="mypage_navi">회원정보</p>
 		 <ul class="navi_ul">
-				<li><a href="">회원정보 보기</a></li>
-				<li><a href="">회원정보 수정</a></li>
-				<li><a href="">회원 탈퇴</a></li>
+				<li><a href="mypage.sc">회원정보 보기</a></li>
+				<li><a href="myedit.sc">회원정보 수정</a></li>
+				<li><a href="mydel.sc">회원 탈퇴</a></li>
 		 </ul>
 	</div>
  		
