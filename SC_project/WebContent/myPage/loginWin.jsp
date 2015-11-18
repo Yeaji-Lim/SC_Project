@@ -11,9 +11,10 @@ form{
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>은빛마을</title>
 <script type="text/javascript">
-function login() {
+function login(ff) {
 	
-	//		var s_id = document.getElementById("m_id").value;
+	//var s_id = document.getElementById("m_id").value;
+	
 	var tel = document.forms[0].tel.value;
 	var pwd = document.forms[0].pwd.value;
 
@@ -26,13 +27,8 @@ function login() {
 		alert("비밀번호를 입력하세요");
 		document.forms[0].pwd.focus();
 		return;
-	}
+	} 
 	document.forms[0].submit();
-	window.close();
-	
-	
-	
-	
 	
 }
 </script>
@@ -42,7 +38,7 @@ function login() {
 
 
 
-<form action="login.sc" method="post"> 	
+<form action="login2.sc" method="post"> 	
 			<fieldset>	
 			전화번호 :<input type="text" class="border" name="tel" id="tel" placeholder="전화번호" /><br/> 
 			비밀번호 :<input type="password" class="border" name="pwd" id="pwd" placeholder="비밀번호" style="margin-top:0px" /><br/> 

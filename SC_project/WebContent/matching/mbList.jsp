@@ -42,7 +42,7 @@
 		  <td align="center" height="10"></td>
 		</tr>
 		<tr>
-		  <td align="center"><b>매칭 게시판</b></td>
+		  <td align="center"><b>요양사를 소개합니다</b></td>
 		</tr>
 		<tr>
 		  <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -50,7 +50,7 @@
 				<td>&nbsp;</td>
 			  </tr>
 			</table>
-			<table width="556" border="0" cellspacing="0" cellpadding="0">
+			<table width="600" border="0" cellspacing="0" cellpadding="0">
 			  <tr>
 				<td height="2" bgcolor="#C3C3C3"></td>
 			  </tr>
@@ -59,10 +59,10 @@
 				<table width="100%" border="0" cellspacing="1" cellpadding="2">
 					<tr>
 					  <td height="20" align="center" bgcolor="#669AB3" width="56"><font color="#FFFFFF">번호</font></td>
-					  <td height="20" align="center" bgcolor="#669AB3" width="270"><font color="#FFFFFF">제목</font></td>
+					  <td height="20" align="center" bgcolor="#669AB3" width="250"><font color="#FFFFFF">제목</font></td>
 					  <td height="20" align="center" bgcolor="#669AB3" width="80"><font color="#FFFFFF">글쓴이</font></td>
 					  <td height="20" align="center" bgcolor="#669AB3" width="100"><font color="#FFFFFF">날짜</font></td>
-					  <td height="20" align="center" bgcolor="#669AB3" width="56"><font color="#FFFFFF">지역</font></td>
+					  <td height="20" align="center" bgcolor="#669AB3" width="100"><font color="#FFFFFF">지역</font></td>
 					</tr>
        				<c:forEach var="vo" items="${list }" varStatus="stat">
 					<tr>
@@ -102,14 +102,14 @@
 				  </table></td>
 			  </tr>
 			</table>
-			<table width="556" border="0" cellspacing="0" cellpadding="0">
+			<table width="600" border="0" cellspacing="0" cellpadding="0">
 			  <tr>
-				<td height="20" valign="middle"><img src="/images/sub_it/point_line.gif" width="556" height="3"></td>
+				<td height="20" valign="middle"><img src="/images/sub_it/point_line.gif" width="600" height="3"></td>
 			  </tr>
 			  <tr>
 				<td align="right"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
 					<tr>
-					  <td width="315" align="left">
+					  <td width="400" align="left">
                           ${pageCode }
 					  </td>
 					  

@@ -6,16 +6,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <title>은빛마을</title>
+<style type="text/css">
+	#intro{
+		position: fixed; 
+		top: 350px; 
+		left: 400px;
+		width: 800px;
+		height: 300px;
+	}
+</style>
 </head>
 <jsp:include page="header.jsp"></jsp:include>
 <body>
-<div style="position: absolute; top: 300px; left: 300px;">
-<h1>남상2<br/>
-new정철<br/>
-성민JAE<br/>
-임예G<br/>
-rock,victory호<br/>
-CHOI mercury</h1>
+<div id="intro">
+<img src="images/intro.png"/>
 </div>
 
 </body>

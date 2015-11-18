@@ -63,6 +63,29 @@ public class LoginControl {
 		return mv;
 	}
 
+	
+	@RequestMapping(value="login2.sc", method=RequestMethod.POST)
+	public ModelAndView login_header(LoginVO vo) throws Exception{
+		request.setCharacterEncoding("utf-8");
+
+		Map<String,String> m = new HashMap<>();
+
+		m.put("tel", vo.getTel());
+		m.put("pwd", vo.getPwd());
+
+		vo = dao.login(m);
+
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("vo", vo);
+
+		if(vo != null){
+			session.setAttribute("login_ok", vo);
+			mv.setViewName("/myPage/loginSuccess");
+		}
+		else
+			mv.setViewName("/error");
+		return mv;
+	}
 
 	
 

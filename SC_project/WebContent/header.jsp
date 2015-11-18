@@ -17,8 +17,9 @@ function openMsg() {
 
 function openLogin(){
 	
-	open('login2.sc','','left=50, top=50, width=330, height=130, scrollbars=0');
+	open('loginHeader.sc','','left=50, top=50, width=330, height=130, scrollbars=0');
 }
+
 
 </script>
 
