@@ -60,7 +60,7 @@
        </c:forEach>
        <c:if test="${empty list }">
 				<tr>
-				  <td bgcolor="#F2F7F9" colspan="5" height="70" align="center">등록된 게시물이 없습니다.</td>
+				  <td bgcolor="#F2F7F9" colspan="5" height="70" align="center">쪽지함이 비어있습니다.</td>
 				</tr>
        </c:if>
 				  </table></td>

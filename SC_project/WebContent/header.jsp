@@ -4,6 +4,7 @@
 <% request.setCharacterEncoding("utf-8"); %>
 
 	<% LoginVO login = (LoginVO)session.getAttribute("login_ok"); %>
+	
 <script type="text/javascript">
 function openReg(){
 	
@@ -12,6 +13,11 @@ function openReg(){
 
 function openMsg() {
 	open('msg_list.sc','','left=50, top=50, width=600, height=300, scrollbars=0');
+}
+
+function openLogin(){
+	
+	open('login2.sc','','left=50, top=50, width=330, height=130, scrollbars=0');
 }
 
 </script>
@@ -31,7 +37,7 @@ function openMsg() {
 				} else {
 			%>
 			<li class="top_link_li01"><a href="javascript:openReg()" class="outlogin_a">회원가입</a></li>
-			<li class="top_link_li01"><a href="login.sc">로그인</a></li>
+			<li class="top_link_li01"><a href="javascript:openLogin()">로그인</a></li>
 			<%
 				}
 			%>
@@ -55,7 +61,7 @@ function openMsg() {
 				</span></li>
 
 				<li id="menu2" class="main_menu fl"><span class="main_menu">
-						<a href="/introduce.jsp" class="topmenu_a01">소개</a>
+						<a href="javascript:location.href='/SC_project/introduce.jsp'" class="topmenu_a01">소개</a>
 				</span></li>
 
 				<li id="menu4" class="main_menu fl"><span class="main_menu">

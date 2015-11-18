@@ -15,6 +15,11 @@
     <!--로그인 bean-->
     <bean id="login" class="silver.web.member.control.LoginControl" autowire="byName"/>
     
+    <!-- 로그인 창 띄우기 bean이얌 -->
+    <bean name="/login2.sc" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+    	<property name="viewName" value="/board/loginWin"></property>
+    </bean>
+    
     <!--회원가입 bean -->
     <bean id="reg" class="silver.web.member.control.RegControl" autowire="byName"/>
     
