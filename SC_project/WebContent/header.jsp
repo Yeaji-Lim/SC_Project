@@ -12,12 +12,12 @@ function openReg(){
 }
 
 function openMsg() {
-	open('msg_list.sc','','left=50, top=50, width=600, height=300, scrollbars=0');
+	open('msg_list.sc','','left=50, top=50, width=600, height=400, scrollbars=0');
 }
 
 function openLogin(){
 	
-	open('loginHeader.sc','','left=600, top=300, width=330, height=160, scrollbars=0');
+	open('loginHeader.sc','','left=600, top=300, width=330, height=190, scrollbars=0');
 }
 
 

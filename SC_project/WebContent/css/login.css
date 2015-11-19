@@ -25,6 +25,13 @@
 	
 }
 
+#login_bt{
+	margin-top: 20px; 
+	width:70px; 
+	height:25px;
+	margin-left: 200px;
+}
+
 
 .myinfo_edit{
 	font-family: NANUMBARUNGOTHIC, '나눔바른고딕';

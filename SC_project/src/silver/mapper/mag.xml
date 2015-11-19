@@ -8,7 +8,7 @@
 	 전체게시물의 수를 반환 -->
 	<select id="msg_totalCount" resultType="int"
 	 parameterType="String">
-		SELECT COUNT(*) FROM msg_t where status=0 and send_tel like #{send_tel}
+		SELECT COUNT(*) FROM msg_t where status=0 and request_tel = #{request_tel}
 	</select>
 	 
 	<!-- 페이징 기법을 활용한 select -->
@@ -18,12 +18,13 @@
 		SELECT * FROM (
 			SELECT rownum as r_num, a.* FROM (
 				SELECT b_idx,send_tel,
-		 request_tel,content,to_char(write_date,'yy-mm-dd')write_date,status,subject FROM msg_t where status = 0 and send_tel like #{send_tel}
+		 request_tel,content,to_char(write_date,'yy-mm-dd')write_date,status,subject 
+		 FROM msg_t where status = 0 and request_tel = #{request_tel}
 				) a
 		) WHERE r_num BETWEEN #{begin} AND #{end}
 	
 	</select>
-  <!--공지사항 쓰기 -->
+  <!--쪽지 쓰기 -->
   <insert id="msg_write" 
 	parameterType="silver.web.message.vo.MsgVO">
 		INSERT INTO msg_t(b_idx,send_tel,
@@ -38,7 +39,7 @@
 		 request_tel,content,to_char(write_date,'yy-mm-dd')write_date,status,subject FROM msg_t
 		WHERE b_idx=#{n}
 	</select> 
-	<!-- 공지사항 삭제 -->
+	<!-- 쪽지 삭제 -->
 	<update id="msg_del" parameterType="silver.web.message.vo.MsgVO">
 		update msg_t
 		set status = 1

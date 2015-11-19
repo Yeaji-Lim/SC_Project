@@ -11,7 +11,7 @@ import silver.web.message.vo.MsgVO;
 
 public class Msg_ViewControl implements Controller {
 
-	MsgDAO dao; // 이름이 같은 경우 자동대입되도록 한다.
+	MsgDAO mgdao; // 이름이 같은 경우 자동대입되도록 한다.
 	// 검색된 게시물이 저장될 곳
 	MsgVO vo;
 	
@@ -19,8 +19,8 @@ public class Msg_ViewControl implements Controller {
 	String b_idx, nowPage;
 	
 
-	public void setDao(MsgDAO dao) {
-		this.dao = dao;
+	public void setDao(MsgDAO mgdao) {
+		this.mgdao = mgdao;
 	}
 
 
@@ -30,9 +30,10 @@ public class Msg_ViewControl implements Controller {
 		b_idx = request.getParameter("b_idx");
 		nowPage = request.getParameter("nowPage");
 		
-		vo = dao.getBoard(b_idx);
+		vo = mgdao.getBoard(b_idx);
 		//jsp에서 표현가기 위해 vo를 ModelAndView에 저장하여 보낸다.
 		ModelAndView mv = new ModelAndView();
+		mv.addObject("send_tel",vo.getSend_tel().trim());
 		mv.addObject("vo", vo);
 		mv.addObject("nowPage", nowPage);
 		mv.addObject("b_idx", b_idx);

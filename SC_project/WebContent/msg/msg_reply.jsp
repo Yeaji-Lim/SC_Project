@@ -8,10 +8,7 @@
 <title>은빛마을</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
-function back(){
-	
-	window.close();
-}
+
 	function check(ff){
 		//유효성 검사
 		ff.submit();
@@ -19,9 +16,11 @@ function back(){
 </script>
 </head>
 <body>
-
-	<form action="msg_write.sc" method="POST">
-	<input type="hidden" name="send_tel" value="${vo.mb_writer }"/>
+<%
+	String send_tel = request.getParameter("send_tel");
+%>
+	<form action="msg_reply.sc" method="POST">
+	<%-- <input type="hidden" name="request_tel" value="<%=request_tel %>"/> --%>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
@@ -30,7 +29,7 @@ function back(){
           <td align="center" height="10"></td>
         </tr>
         <tr>
-          <td align="center"><b>쪽지보내기</b></td>
+          <td align="center"><b>답장쓰기</b></td>
         </tr>
         <tr>
           <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -51,7 +50,7 @@ function back(){
                     </tr>
 					<tr>
 						<td width="90" height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">받는사람</font></td>
-						<td bgcolor="#F2F7F9" align="left"> <input type="text" name="request_tel" cssStyle="width:100px" theme="simple" value="${vo.mb_writer} "/></td>
+						<td bgcolor="#F2F7F9" align="left"> <input type="text" name="request_tel" cssStyle="width:100px" theme="simple" value="<%=send_tel %> "/></td>
                     <tr>
                       <td height="20" align="center" bgcolor="#669AB3"><font color="#FFFFFF">제목</font></td>
                       <td bgcolor="#F2F7F9" align="left"> <input type="text" name="subject" size="50" theme="simple"/></td>
@@ -76,7 +75,7 @@ function back(){
                       </td>
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
-                      <input type="button" onclick="back()" value="뒤로"/>
+                      <input type="button" onclick="javascript:location.href='msg_list.sc'" value="뒤로"/>
                       
                       </td>
                     </tr>

@@ -1,3 +1,5 @@
+<%@page import="silver.web.message.vo.MsgVO"%>
+<%@page import="silver.web.member.vo.LoginVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -42,10 +44,11 @@
 					  <td height="20" align="center" bgcolor="#669AB3" width="80"><font color="#FFFFFF">보낸이</font></td>
 					  <td height="20" align="center" bgcolor="#669AB3" width="100"><font color="#FFFFFF">날짜</font></td>
 					</tr>
+					
        				<c:forEach var="vo" items="${list }" varStatus="stat">
+       				
 					<tr>
 					  <td bgcolor="#F2F7F9">
-<!--                           <s:property value="rowTotal-((nowPage-1)*blockList+#stat.index)"/> -->
 						${rowTotal-((nowPage-1)*blockList+stat.index) }
                       </td>
 					  <td bgcolor="#F2F7F9" style="text-align:left">
@@ -54,10 +57,12 @@
 							${vo.subject }
 						</a>
                       </td>
-					  <td bgcolor="#F2F7F9">${vo.request_tel}</td>
+					  <td bgcolor="#F2F7F9">${vo.send_tel}</td>
 					  <td bgcolor="#F2F7F9">${vo.write_date }</td>
 					</tr>
+      
        </c:forEach>
+      
        <c:if test="${empty list }">
 				<tr>
 				  <td bgcolor="#F2F7F9" colspan="5" height="70" align="center">쪽지함이 비어있습니다.</td>
@@ -89,7 +94,6 @@
   </tr>
 </table>
 </form>
-
  <!--주요내용끝 -->
 
 </body>

@@ -26,7 +26,7 @@ public class Msg_WriteControl {
  * 설정되어 있어야 한다.
  */
 	@Autowired
-	MsgDAO dao;
+	MsgDAO mgdao;
 	
 	@Autowired
 	HttpServletRequest request;
@@ -49,7 +49,7 @@ public class Msg_WriteControl {
 		LoginVO login = (LoginVO)session.getAttribute("login_ok");
 		vo.setRequest_tel(login.getTel());
 		
-		dao.writeBbs(vo);
+		mgdao.writeBbs(vo);
 		//반환객체 생성
 		ModelAndView mv = new ModelAndView();
 		

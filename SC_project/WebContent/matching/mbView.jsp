@@ -25,7 +25,7 @@
 	}
 	
 	function msg_open(){
-		open('msgWriteForm.sc','','left=50, top=50, width=600, height=350, scrollbars=0');
+		open('msgWriteForm.sc','','left=50, top=50, width=600, height=380, scrollbars=0');
 	}
 	
 	function mbDel(num){

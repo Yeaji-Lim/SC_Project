@@ -11,6 +11,12 @@ form{
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="css/login.css" type="text/css" />
 <title>은빛마을</title>
+
+<style type="text/css">
+	a{
+		font-family: NANUMBARUNGOTHIC, '나눔바른고딕';
+	}
+</style>
 <script type="text/javascript">
 function login(ff) {
 	
@@ -42,9 +48,9 @@ function login(ff) {
 <form action="login2.sc" method="post"> 	
 			<fieldset>
 			<legend class="login_txt">로그인</legend>	
-			<a>아이디 :</a> &nbsp;&nbsp;<input type="text" class="border" name="tel" id="tel" placeholder="전화번호" /><br/> 
+			<a>아이디 :</a> &nbsp;&nbsp;<input type="text" class="border" name="tel" id="tel" placeholder="전화번호" /><br/><br/> 
 			<a>비밀번호 :</a> &nbsp;&nbsp;<input type="password" class="border" name="pwd" id="pwd" placeholder="비밀번호" style="margin-top:0px" /><br/> 
-			<input type="button" value="로그인" id="log_bt" onclick="login()" style="margin-top:10px; width:70px; height:25px;" align="right"/>
+			<input type="button" value="로그인" id="login_bt" onclick="login()"/>
 			</fieldset>
 </form>	
 </body>

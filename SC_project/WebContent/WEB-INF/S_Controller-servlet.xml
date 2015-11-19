@@ -154,8 +154,7 @@
 		<property name="dao" ref="mgdao"></property>
 	</bean>
 	<!-- 쪽지쓰기 -->
-	<bean id="msg_write" class="silver.web.message.control.Msg_WriteControl" autowire="byName">
-	</bean>
+	<bean id="msg_write" class="silver.web.message.control.Msg_WriteControl" autowire="byName"/>
 	<!-- 쪽지쓰기 폼 -->
 	<bean name="/msgWriteForm.sc"
 	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
@@ -166,6 +165,17 @@
 	<bean name="/msg_del.sc" class="silver.web.message.control.Msg_DelControl" autowire="byName">
 		<property name="dao" ref="mgdao"></property>
 	</bean>
+	
+	<!-- 쪽지 답장 쓰기 -->
+	<bean id="msg_reply" class="silver.web.message.control.Msg_ReplyControl" autowire="byName"/>
+	<!-- 쪽지 답장 쓰기 폼 -->
+	<!-- <bean name="/msgReplyForm.sc"
+	class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" 
+			value="/msg/msg_reply"/>
+	</bean> -->
+	
+	
 	
 	
 	<!--매칭 게시판 쓰기 폼-->

@@ -36,16 +36,11 @@ public class MsgDAO {
 		return ar;
 	}
 	//공지사항 글저장
-	public boolean writeBbs(MsgVO vo){
-		int cnt = template.insert("msg.msg_write",vo);
-			//System.out.println(cnt);
-		if(cnt >0 ){
-			return true;
-			}
-		else{
-			return false;
-			}
-		}
+	public void writeBbs(MsgVO vo){
+		String re = vo.getRequest_tel().trim();
+		vo.setRequest_tel(re);
+		template.insert("msg.msg_write",vo);	
+	}
 	//쪽지보기보기
 	public MsgVO getBoard(String b_idx){
 		return template.selectOne("msg.msg_getBoard", b_idx);

@@ -12,15 +12,15 @@ import silver.web.message.vo.MsgVO;
 
 public class Msg_DelControl implements Controller  {
 
-	MsgDAO dao;
+	MsgDAO mgdao;
 	MsgVO vo;
 	
 	String b_idx,tel;
 	
 
 
-	public void setDao(MsgDAO dao) {
-		this.dao = dao;
+	public void setDao(MsgDAO mgdao) {
+		this.mgdao = mgdao;
 	}
 
 
@@ -34,7 +34,7 @@ public class Msg_DelControl implements Controller  {
 		vo.setB_idx(b_idx);
 		//vo.setSendtel(tel);
 		ModelAndView mv = new ModelAndView();
-		dao.delBbs(vo);
+		mgdao.delBbs(vo);
 		mv.setViewName("redirect:/msg_list.sc");
 		
 		return mv;

@@ -12,6 +12,12 @@
 		alert("쪽지를 삭제하시겠습니까?");
 		//location.href="msg_del.sc?b_idx="+b_idx;
 	}
+	
+	function reply() {
+		
+		document.forms[0].action = "msg_reply.sc";
+		document.forms[0].submit();
+	}
 
 </script>
 </head>
@@ -61,7 +67,11 @@
 					&nbsp;
 				  </td>
 				  <td width="241" align="right">
-					<img src="images/button/but_list.gif" width="56" height="21" onClick="JavaScript:location.href='msg_list.sc?nowPage=${nowPage}'" style="cursor:pointer"/>
+				  	<form action="msg_reply.sc" method="get">
+					<img src="images/message/bu_recieve.jpg" width="56" height="21" onclick="reply()" style="cursor:pointer"/>
+					<input type="hidden" name="send_tel" value="${send_tel}"/>
+					</form>
+					<img src="images/button/but_list.gif" width="56" height="21" onClick="javaScript:location.href='msg_list.sc?nowPage=${nowPage}'" style="cursor:pointer"/>
 					<img src="images/button/but_del.gif" width="56" height="21" onClick="del_ok(${b_idx})"/>
 					
 					</td>
@@ -72,7 +82,6 @@
 			<td height="19">&nbsp;</td>
 		  </tr>
 
-			  
 
 		</table>
 		<iframe id="check_f" border='0' width="0" height="0" frameborder='0' marginwidth='0' marginheight='0' scrolling="no"></iframe>
