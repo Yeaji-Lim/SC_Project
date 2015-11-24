@@ -8,7 +8,6 @@
 <head>
 <title>은빛마을</title>
 <link href="text.css" rel="stylesheet" type="text/css">
-
 </head>
 <body topmargin=0 leftmargin=0 marginwidth="0" marginheight="0">
 
