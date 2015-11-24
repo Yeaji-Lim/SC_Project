@@ -105,21 +105,21 @@
 	<select id="getBoard" 
 	parameterType="String" 
 	resultMap="bbs">
-		SELECT seq,writer,title,content,pwd,hit,groups,step,lev,bname,to_char(regdate,'yy-mm-dd')regdate,uploadfilename,ip FROM bbs2 WHERE seq=#{n}
+		SELECT seq,writer,title,content,pwd,hit,groups,step,lev,bname,to_char(regdate,'yy-mm-dd')regdate,uploadfilename,ip 
+		FROM bbs2 WHERE seq=#{n}
 	</select>  
 	  
 	<!-- 게시물 수정 기능(기본키와 pwd가 필요) -->
 	<update id="edit" 
 	parameterType="silver.web.board.vo.BbsVO">
 		UPDATE bbs2
-		SET title=#{title},
-			content=#{content}
-			<if test="uploadFileName != null">
-				,uploadFileName=#{uploadFileName}
-			</if>
-		WHERE seq=#{seq} AND pwd=#{pwd}
+		SET title=#{title}, content=#{content}
+		WHERE seq=#{seq}
 	</update>	
-		
+
+	<!-- <if test="uploadFileName != null">
+				,uploadFileName=#{uploadFileName}
+			</if> -->
 		
 	<update id="updateHit" parameterType="String">
 		UPDATE bbs2

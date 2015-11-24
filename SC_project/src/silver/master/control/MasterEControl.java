@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import silver.master.dao.MasterDAO;
-import silver.web.board.vo.FreeBoardVO;
 import silver.web.member.vo.LoginVO;
 
 @Controller

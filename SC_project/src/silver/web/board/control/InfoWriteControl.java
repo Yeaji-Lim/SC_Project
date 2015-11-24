@@ -1,7 +1,5 @@
 package silver.web.board.control;
 
-import java.io.File;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -10,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import silver.web.board.dao.BbsDAO;
@@ -43,7 +40,7 @@ public class InfoWriteControl {
 	@RequestMapping(value="/infowrite.sc", method=RequestMethod.POST)
 	public ModelAndView write(BbsVO vo) throws Exception{
 		
-		if(vo.getUpload().getSize()>0){
+		/*if(vo.getUpload().getSize()>0){
 			
 			String path = servletContext.getRealPath(uploadPath);
 			
@@ -58,9 +55,10 @@ public class InfoWriteControl {
 			vo.setUploadFileName(fileName);
 			
 		}else{
-				vo.setUploadFileName("");
-		}
+				
+		}*/
 		
+		vo.setUploadFileName("");
 		vo.setIp(request.getRemoteAddr());
 		vo.setBname("BBS");
 		

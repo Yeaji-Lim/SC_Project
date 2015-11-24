@@ -9,7 +9,7 @@
 <title>은빛마을</title>
 <link rel="stylesheet" href="css/public.css" type="text/css" />
 <style type="text/css">
-#infoEdit{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+#infoEdit{position:relative; width:600px; height:auto; margin:0 auto; margin-top:260px;}
 </style>
 <script type="text/javascript">
 function check(ff){
@@ -33,11 +33,11 @@ function check(ff){
 <jsp:include page="../header.jsp"></jsp:include>
 <body>
 
-	<form action="edit.sc" method="post" 
-	enctype="multipart/form-data" id="infoEdit">
+	<form action="edit.sc" method="post" id="infoEdit">
 		<input type="hidden" name="seq" value="${seq }" />
 		<input type="hidden" name="nowPage" value="${nowPage }"/>
-		<input type="hidden" name="uploadFileName" value="${vo.uploadFileName }"/> 
+		<input type="hidden" name="vo" value="${vo }"/>
+		<%-- <input type="hidden" name="uploadFileName" value="${vo.uploadFileName }"/>  --%>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td valign="top">
@@ -46,7 +46,7 @@ function check(ff){
           <td align="center" height="10"></td>
         </tr>
         <tr>
-          <td align="center"><u><b>글 수정하기</b></u></td>
+          <td align="center"><u><b>정보 게시판 글 수정</b></u></td>
         </tr>
         <tr>
           <td align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -84,7 +84,7 @@ function check(ff){
       </tr> --%>
        <tr>
        
-   <input type="hidden" name="pwd" value="1" cssStyle="width:200px" theme="simple"/>
+   <!-- <input type="hidden" name="pwd" value="1" cssStyle="width:200px" theme="simple"/> -->
         
      </tr>
     </table></td>

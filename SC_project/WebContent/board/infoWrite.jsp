@@ -100,7 +100,7 @@ function back(){
                       <td width="241" align="right">
                       <input type="button" onclick="check(this.form)" value="보내기"/>
                       <input type="button" onclick="back()" value="뒤로"/>
-                      <input type="hidden" value="1" name="pwd"/>
+                      <input type="hidden" value="<%=login.getPwd()%> " name="pwd"/>
                       </td>
                     </tr>
                   </table></td>

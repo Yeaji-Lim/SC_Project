@@ -44,10 +44,10 @@ public class Msg_WriteControl {
 		//동일한 곳에 찾아 저장된다.
 			//DB저장!
 		String send_tel = request.getParameter("send_tel");
-		vo.setSend_tel(send_tel);
-		
 		LoginVO login = (LoginVO)session.getAttribute("login_ok");
-		vo.setRequest_tel(login.getTel());
+		vo.setSend_tel(login.getTel());
+		
+		vo.setRequest_tel(send_tel);
 		
 		mgdao.writeBbs(vo);
 		//반환객체 생성

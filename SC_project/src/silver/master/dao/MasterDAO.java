@@ -1,12 +1,10 @@
 package silver.master.dao;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 
-import silver.web.board.vo.FreeBoardVO;
 import silver.web.member.vo.LoginVO;
 
 public class MasterDAO {

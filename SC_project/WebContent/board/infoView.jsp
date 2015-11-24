@@ -1,8 +1,3 @@
-<%-- 
-    Document   : view
-    Created on : 2009. 4. 3, 오후 12:21:38
-    Author     : hb00
---%>
 <%@page import="silver.web.member.vo.LoginVO"%>
 <%@page import="silver.web.board.vo.BbsVO"%>
 <%@page import="java.util.List"%>
@@ -25,7 +20,7 @@
 <link href="text.css" rel="stylesheet" type="text/css">
 
 <style type="text/css">
-#infoList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:255px;}
+#infoList{position:relative; width:600px; height:auto; margin:0 auto; margin-top:260px;}
 </style>
 <script type="text/javascript">
 	function back(){
@@ -61,7 +56,7 @@
 
 
 		  <tr>
-		    <td align="center"><u><b>정보게시판 글보기</b><u></td>
+		    <td align="center"><u><b>정보게시판 글보기</b></u></td>
 		  </tr>
 		  <tr>
 			<td height="2" bgcolor="#C3C3C3"></td>
@@ -94,9 +89,9 @@
 				</tr>
 				<tr valign="top">
 				  <td height="23" colspan="4" bgcolor="#FFFFFF">
-					<table width="100%" border="0" cellspacing="0" cellpadding="15">
+					<table width="500px" border="0" cellspacing="0" cellpadding="15">
 					  <tr>
-						<td valign="top"> <pre>${vo.content}</pre>
+						<td valign="top"> <pre style="width: 500px;">${vo.content}</pre>
 						  <p>&nbsp;</p></td>
 					  </tr>
 					</table></td>
