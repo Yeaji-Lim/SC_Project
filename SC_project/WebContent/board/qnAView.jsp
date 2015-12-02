@@ -98,7 +98,8 @@
 				  <%
 				  	if(login != null){
 				  %>
-				  <td width="241" align="right"><img src="images/button/but_answer.gif" width="56" height="21" onClick="javaScript:location.href='qb_answer.sc?qb_num=${vo.qb_num}&qb_groups=${vo.qb_groups }&qb_step=${vo.qb_step }&qb_lev=${vo.qb_lev }&nowPage=${nowPage }'" style="cursor:pointer">
+				  <td width="241" align="right">
+				  <img src="images/button/but_answer.gif" width="56" height="21" onClick="javaScript:location.href='qb_answer.sc?qb_num=${vo.qb_num}&qb_groups=${vo.qb_groups }&qb_step=${vo.qb_step }&qb_lev=${vo.qb_lev }&nowPage=${nowPage }'" style="cursor:pointer">
 					
 					<%
 						QNABoardVO vo = (QNABoardVO)session.getAttribute("vo");

@@ -73,7 +73,7 @@ function check(ff){
                       <td bgcolor="#F2F7F9" align="left"> <input type="password" name="pwd" cssStyle="width:200px" theme="simple"/>
                         <font color="#0066CC">* 삭제.수정시 필요</font> </td>
                     </tr> -->
-                    <input type="button" value="뒤로" onclick="back()"/>
+                    
                   </table></td>
               </tr>
             </table>

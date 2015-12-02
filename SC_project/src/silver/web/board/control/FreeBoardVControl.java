@@ -3,6 +3,7 @@ package silver.web.board.control;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,12 @@ public class FreeBoardVControl {
 
 	@Autowired
 	HttpServletRequest request;
+	
+	@Autowired
+	HttpSession session;
+	
+	FreeBoardVO vo;
+	
 	String fb_num,nowPage;
 		
 	@RequestMapping("/freeview.sc")
@@ -38,6 +45,7 @@ public class FreeBoardVControl {
 		//vo를 ModelAndView에 저장하여 보낸다.
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("vo", vo);
+		session.setAttribute("free", vo);
 		mv.addObject("nowPage", nowPage);
 		mv.addObject("fb_num", fb_num);
 		mv.addObject("list1",list1);
